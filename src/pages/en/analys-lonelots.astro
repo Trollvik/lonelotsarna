@@ -275,19 +275,27 @@ const base = import.meta.env.BASE_URL;
     </div>
   </section>
 
-  <!-- Handbook -->
+  <!-- Guidelines -->
   <section class="py-12 bg-brand-gray">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-2xl font-medium text-brand-text uppercase tracking-wider mb-4">Handbook</h2>
-      <p class="text-brand-text/70 mb-6">
-        The handbook provides step-by-step instructions for conducting a pay survey
-        and adapting the job evaluation system to your organisation. Available in Swedish.
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-medium text-brand-text uppercase tracking-wider mb-8 text-center">Guidelines</h2>
+      <div class="max-w-2xl mx-auto flex flex-col sm:flex-row gap-4 justify-center">
+        <a href={`${base}/documents/Lonelots+Job+Evaluation+Guideline+2025.pdf`} target="_blank" rel="noopener noreferrer"
+          class="inline-flex items-center justify-center gap-2 bg-brand-red text-white font-medium px-6 py-3 uppercase tracking-wider text-sm hover:bg-brand-red-dark transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+          Job Evaluation Guideline (PDF)
+        </a>
+        <a href={`${base}/documents/Pay+Survey+Guideline+2025.pdf`} target="_blank" rel="noopener noreferrer"
+          class="inline-flex items-center justify-center gap-2 bg-brand-red text-white font-medium px-6 py-3 uppercase tracking-wider text-sm hover:bg-brand-red-dark transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+          Pay Survey Guideline (PDF)
+        </a>
+      </div>
+      <p class="text-brand-text/50 text-center text-sm mt-6">
+        A detailed handbook is also available:
+        <a href={`${base}/documents/Handbok+till+Analys+Lönelots.pdf`} target="_blank" rel="noopener noreferrer"
+          class="text-brand-red hover:text-brand-red-dark">Download handbook (PDF, Swedish)</a>
       </p>
-      <a href={`${base}/documents/Handbok+till+Analys+Lönelots.pdf`} target="_blank" rel="noopener noreferrer"
-        class="inline-flex items-center gap-2 bg-brand-red text-white font-medium px-6 py-3 uppercase tracking-wider text-sm hover:bg-brand-red-dark transition-colors">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
-        Download handbook (PDF, Swedish)
-      </a>
     </div>
   </section>
 
