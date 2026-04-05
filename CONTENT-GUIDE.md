@@ -21,7 +21,7 @@ Du behöver **inte** kunna HTML eller programmering för att redigera texter.
 
 ## Roller
 
-### Marie (redaktör)
+### Johanna (redaktör)
 - Kan redigera texter direkt i webbläsaren via GitHub
 - Kan ladda upp nya PDF-dokument
 - Kan byta bilder
