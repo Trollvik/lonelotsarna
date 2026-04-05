@@ -35,19 +35,16 @@ const base = import.meta.env.BASE_URL;
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-2xl font-medium text-brand-text uppercase tracking-wider mb-8 text-center">Download</h2>
       <div class="max-w-2xl mx-auto">
-        <p class="text-brand-text/70 mb-6 text-center">
+        <p id="version-text" class="text-brand-text/70 mb-6 text-center">
           Version 7.1 – free for all organisations, large and small.
         </p>
-        <!-- DOWNLOAD LINKS — Do NOT edit these URLs!
-             Filenames must match the files uploaded to GitHub Releases.
-             For new versions: contact Emil to update the links. -->
         <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-          <a href="https://github.com/Trollvik/lonelotsarna/releases/latest/download/LoneLots-7.1-EN.exe"
+          <a id="download-pc" href="https://github.com/Trollvik/lonelotsarna/releases/latest/download/LoneLots-7.1-EN.exe"
             class="flex items-center justify-center gap-2 bg-brand-red text-white font-medium px-6 py-3 uppercase tracking-wider text-sm hover:bg-brand-red-dark transition-colors">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
             Download for PC
           </a>
-          <a href="https://github.com/Trollvik/lonelotsarna/releases/latest/download/lonelots-mac-7.1-arm64-EN.dmg"
+          <a id="download-mac" href="https://github.com/Trollvik/lonelotsarna/releases/latest/download/lonelots-mac-7.1-arm64-EN.dmg"
             class="flex items-center justify-center gap-2 bg-brand-red text-white font-medium px-6 py-3 uppercase tracking-wider text-sm hover:bg-brand-red-dark transition-colors">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
             Download for Mac
@@ -567,6 +564,27 @@ const base = import.meta.env.BASE_URL;
   </section>
 
 </BaseLayout>
+
+<script is:inline>
+  (async function () {
+    try {
+      const res = await fetch('https://api.github.com/repos/Trollvik/lonelotsarna/releases');
+      if (!res.ok) return;
+      const releases = await res.json();
+      const release = releases.find(r => r.assets && r.assets.length > 0);
+      if (!release) return;
+
+      const version = release.tag_name.replace(/^v/, '');
+      const pc = release.assets.find(a => a.name.endsWith('.exe') && a.name.includes('-EN'));
+      const mac = release.assets.find(a => a.name.endsWith('.dmg') && a.name.includes('-EN'));
+
+      const versionEl = document.getElementById('version-text');
+      if (versionEl) versionEl.textContent = 'Version ' + version + ' \u2013 free for all organisations, large and small.';
+      if (pc) { const el = document.getElementById('download-pc'); if (el) el.href = pc.browser_download_url; }
+      if (mac) { const el = document.getElementById('download-mac'); if (el) el.href = mac.browser_download_url; }
+    } catch (e) { /* fallback to hardcoded links */ }
+  })();
+</script>
 
 <style>
   details[open] > summary svg:last-child {
