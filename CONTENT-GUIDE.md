@@ -109,7 +109,7 @@ Installationsfilerna hostas via GitHub Releases (inte i repot — de är för st
 
 ### Viktigt om filnamn
 
-Nedladdningslänkarna på sajten pekar på specifika filnamn. Om filnamnen ändras vid en ny version måste länkarna i koden uppdateras. Nuvarande filnamn:
+Nedladdningslänkarna på sajten pekar på specifika filnamn. **Om filnamnen ändras vid en ny version måste Emil uppdatera länkarna i koden.** Meddela Emil när nya filer laddas upp med andra filnamn. Nuvarande filnamn:
 
 | Språk | PC | Mac |
 |-------|-----|-----|
