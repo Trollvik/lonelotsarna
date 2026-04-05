@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout title="Sidan hittades inte – Lönelotsarna" description="Sidan du söker finns inte.">
+  <section class="py-32 bg-white">
+    <div class="max-w-2xl mx-auto px-4 text-center">
+      <h1 class="text-6xl font-medium text-brand-red mb-4">404</h1>
+      <p class="text-xl text-brand-text/70 mb-8">
+        Sidan du söker finns inte.
+      </p>
+      <a href={`${base}/`}
+        class="inline-block bg-brand-red text-white font-medium px-8 py-3 uppercase tracking-wider text-sm hover:bg-brand-red-dark transition-colors">
+        Till startsidan
+      </a>
+    </div>
+  </section>
+</BaseLayout>

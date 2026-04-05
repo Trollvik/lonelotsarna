@@ -5,18 +5,31 @@ interface Props {
   title?: string;
   description?: string;
   lang?: 'sv' | 'en';
+  ogImage?: string;
 }
 
 const base = import.meta.env.BASE_URL;
+const siteUrl = 'https://trollvik.github.io';
 
 const {
   title = 'Lönelotsarna – Jämställda löner genom kunskap och verktyg',
   description = 'Lönelotsarna är en ideell förening som verkar för jämställda löner genom kunskap, opinion och verktyget Analys Lönelots.',
   lang = 'sv',
+  ogImage = `${base}/images/Lönelotsarna.jpg`,
 } = Astro.props;
 
 const isEn = lang === 'en';
 const homeHref = isEn ? `${base}/en` : `${base}/`;
+const currentPath = Astro.url.pathname;
+
+// Build the alternate language URL
+const altLang = isEn ? 'sv' : 'en';
+const altPath = isEn
+  ? currentPath.replace('/en/', '/').replace('/en', '/')
+  : currentPath.replace(base, `${base}/en`);
+const canonicalUrl = `${siteUrl}${currentPath}`;
+const altUrl = `${siteUrl}${altPath}`;
+
 const nav = isEn
   ? [
       { label: 'About', href: `${base}/en#about` },
@@ -40,6 +53,27 @@ const langSwitch = isEn
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
     <link rel="icon" type="image/svg+xml" href={`${base}/favicon.svg`} />
+    <link rel="canonical" href={canonicalUrl} />
+
+    <!-- Hreflang: connect Swedish and English versions -->
+    <link rel="alternate" hreflang={lang} href={canonicalUrl} />
+    <link rel="alternate" hreflang={altLang} href={altUrl} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={`${siteUrl}${ogImage}`} />
+    <meta property="og:locale" content={isEn ? 'en_GB' : 'sv_SE'} />
+    <meta property="og:site_name" content="Lönelotsarna" />
+
+    <!-- Twitter/X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={`${siteUrl}${ogImage}`} />
+
     <title>{title}</title>
   </head>
   <body class="bg-white antialiased">
