@@ -1,10 +1,11 @@
 ---
+const base = import.meta.env.BASE_URL;
 ---
 
 <section class="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
   <!-- Hero background image -->
   <img
-    src="/images/Lönelotsarna.jpg"
+    src={`${base}/images/Lönelotsarna.jpg`}
     alt=""
     class="absolute inset-0 w-full h-full object-cover"
   />
