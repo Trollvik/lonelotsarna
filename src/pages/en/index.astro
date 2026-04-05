@@ -17,43 +17,35 @@ const base = import.meta.env.BASE_URL;
       <h1 class="text-3xl sm:text-4xl lg:text-5xl font-medium uppercase tracking-wider mb-6">
         Experts in wage formation and salary and pay equity reviews
       </h1>
-      <p class="text-base sm:text-lg max-w-2xl mx-auto text-white/90">
-        We provide support in matters related to wage formation, job evaluation,
-        and pay equity reviews. We also provide Lonelots — a user-friendly and
-        cost free tool for job evaluation and pay survey.
+      <p class="text-base sm:text-lg max-w-2xl mx-auto text-white/90 mb-4">
+        Welcome to Lönelotsarna! We provide support in matters related to wage formation,
+        job evaluation, and pay equity reviews.
       </p>
+      <p class="text-base sm:text-lg max-w-2xl mx-auto text-white/90 mb-8">
+        We also provide Lonelots — a user-friendly and cost free tool for job evaluation and pay survey.
+      </p>
+      <a href="mailto:info@lonelotsarna.se"
+        class="inline-block bg-white text-brand-text font-medium px-8 py-3 uppercase tracking-wider text-sm hover:bg-brand-gray transition-colors">
+        Contact us
+      </a>
     </div>
   </section>
 
-  <!-- About -->
+  <!-- Our Services -->
   <section id="about" class="py-20 bg-white">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-2xl font-medium text-brand-text uppercase tracking-wider mb-12 text-center">About us</h2>
+      <h2 class="text-2xl font-medium text-brand-text uppercase tracking-wider mb-12 text-center">Our services</h2>
 
+      <!-- The Lonelots Tool -->
       <div class="max-w-3xl mx-auto mb-12">
-        <p class="text-brand-text/70 mb-4">
-          The Lönelotsarna team is a group of consultants with extensive experience, specialised
-          in wage formation, salary review and equal pay.
-        </p>
-        <p class="text-brand-text/70 mb-4">
-          We are also a non-profit organisation working for equal pay by developing methods,
-          raising awareness and driving the public debate on equal pay. We have developed the
-          Lonelots tool for job evaluation and provide it free of charge. We also publish
-          annual reports on the structural pay gap.
-        </p>
-        <p class="text-brand-text/70">
-          Marie Trollvik is the chairperson of the association.
-        </p>
-      </div>
-
-      <!-- Lonelots Tool -->
-      <div class="border-t border-brand-red pt-8 max-w-3xl mx-auto mb-8">
         <h3 class="text-lg font-medium text-brand-text uppercase tracking-wider mb-3">The Lonelots Tool</h3>
         <p class="text-brand-text/70 mb-4">
           The Lonelots tool is a weighted multi-factor and gender-neutral job evaluation tool
           that you can download free of charge. The system is based on the main areas of the
           Swedish Discrimination Act — knowledge and skills, responsibility, effort, and working
           conditions, factors that are globally recognized as essential for defining equivalent work.
+          The system is a basic model with factors, aspects, and levels designed so that each user
+          can adapt the method to their operations.
         </p>
         <p class="text-brand-text/70 mb-4">
           The tool consists of two parts: a job evaluation system to assess which work is equivalent
@@ -62,35 +54,96 @@ const base = import.meta.env.BASE_URL;
         </p>
         <a href={`${base}/en/analys-lonelots`}
           class="inline-flex items-center gap-2 text-brand-red font-medium hover:text-brand-red-dark transition-colors">
-          Learn more and download
+          Download and get started
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
           </svg>
         </a>
       </div>
 
-      <!-- Consultancy -->
-      <div class="border-t border-gray-200 pt-8 max-w-3xl mx-auto">
-        <h3 class="text-lg font-medium text-brand-text uppercase tracking-wider mb-3">Consultancy</h3>
-        <p class="text-brand-text/70 mb-4">
-          Need support with the pay survey process, wage formation, or salary setting?
+      <!-- Consultancy Services -->
+      <div class="border-t border-gray-200 pt-8 max-w-3xl mx-auto mb-12">
+        <h3 class="text-lg font-medium text-brand-text uppercase tracking-wider mb-3">Consultancy services</h3>
+
+        <div class="space-y-6">
+          <div>
+            <h4 class="font-medium text-brand-text mb-2">Consultancy support</h4>
+            <p class="text-brand-text/70">
+              The Lonelots consultants can support you with parts of or with the full pay survey process,
+              from start to end. Based on your needs we will offer a support model that is qualitative and efficient.
+            </p>
+          </div>
+          <div>
+            <h4 class="font-medium text-brand-text mb-2">Trainings</h4>
+            <p class="text-brand-text/70">
+              Do you need to skill up in the area of salary reviews? We deliver open trainings in Swedish
+              as well as customised trainings based on your needs (also available in English).
+            </p>
+          </div>
+          <div>
+            <h4 class="font-medium text-brand-text mb-2">Salary setting — process and structure</h4>
+            <p class="text-brand-text/70">
+              Lönelotsarna can help you develop salary policy and guidelines, an annual cycle for the
+              salary process, individual salary setting criteria and documentation templates for
+              employee and salary conversations.
+            </p>
+          </div>
+        </div>
+
+        <p class="text-brand-text/70 mt-6">
+          Would you like to know more about how we can support you?
+          <a href="mailto:info@lonelotsarna.se" class="text-brand-red hover:text-brand-red-dark">Contact us</a>.
         </p>
-        <a href="https://viaconsulting.nu/" target="_blank" rel="noopener noreferrer"
-          class="inline-flex items-center gap-2 text-brand-red font-medium hover:text-brand-red-dark transition-colors">
-          Visit Via Consulting
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-          </svg>
-        </a>
       </div>
     </div>
   </section>
 
+  <!-- Job Evaluation and Pay Review -->
+  <section class="py-20 bg-brand-gray">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-medium text-brand-text uppercase tracking-wider mb-12 text-center">Job evaluation and pay review</h2>
+
+      <div class="max-w-3xl mx-auto grid md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="text-lg font-medium text-brand-text uppercase tracking-wider mb-3">Job evaluation</h3>
+          <p class="text-brand-text/70 mb-4">
+            To manage your job evaluation in the Lonelots tool, after downloading the program,
+            follow the seven steps described in the Job Evaluation Guideline.
+          </p>
+          <a href={`${base}/documents/Lonelots+Job+Evaluation+Guideline+2025.pdf`} target="_blank" rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 text-brand-red font-medium hover:text-brand-red-dark transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+            Job Evaluation Guideline (PDF)
+          </a>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-medium text-brand-text uppercase tracking-wider mb-3">Pay review</h3>
+          <p class="text-brand-text/70 mb-4">
+            After you have carried out the job evaluation, you are ready for the pay review.
+            Follow the seven steps described in our Pay Survey Guideline to conduct a pay survey
+            and analyse the results.
+          </p>
+          <a href={`${base}/documents/Pay+Survey+Guideline+2025.pdf`} target="_blank" rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 text-brand-red font-medium hover:text-brand-red-dark transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+            Pay Survey Guideline (PDF)
+          </a>
+        </div>
+      </div>
+
+      <p class="text-brand-text/70 text-center max-w-3xl mx-auto mt-8">
+        If you have questions or need support, contact us at
+        <a href="mailto:info@lonelotsarna.se" class="text-brand-red hover:text-brand-red-dark">info@lonelotsarna.se</a>.
+      </p>
+    </div>
+  </section>
+
   <!-- The Structural Wage Gap -->
-  <section id="reports" class="py-20 bg-brand-gray">
+  <section id="reports" class="py-20 bg-white">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-2xl font-medium text-brand-text uppercase tracking-wider mb-4 text-center">The Structural Wage Gap</h2>
-      <p class="text-brand-text/70 text-center max-w-3xl mx-auto mb-8">
+      <p class="text-brand-text/70 text-center max-w-3xl mx-auto mb-4">
         Structural wage differences refer to wage disparities between groups of women and men
         that cannot be explained by differences in job requirements, the complexity of the work,
         or the employees' performance and skills. Instead, these pay gaps may stem from value
@@ -102,26 +155,13 @@ const base = import.meta.env.BASE_URL;
         occupations across sectors and assessing them using the Lonelots job evaluation tool.
       </p>
 
-      <div class="max-w-3xl mx-auto space-y-4">
-        <a href={`${base}/documents/Stäng+lönegapet+och+säkra+välfärden.pdf`} target="_blank" rel="noopener noreferrer"
-          class="block bg-white p-5 border-b border-gray-200 hover:shadow-md transition-shadow group">
+      <div class="max-w-3xl mx-auto">
+        <a href={`${base}/documents/Highly+valued+-+low+pay.pdf`} target="_blank" rel="noopener noreferrer"
+          class="block bg-brand-gray p-6 hover:shadow-md transition-shadow group">
           <div class="flex items-center justify-between gap-4">
             <div>
-              <span class="text-sm font-medium text-brand-red">2024</span>
-              <span class="ml-2 font-medium text-brand-text group-hover:text-brand-red transition-colors">Stäng lönegapet och säkra välfärden!</span>
-            </div>
-            <svg class="w-5 h-5 text-brand-text/30 group-hover:text-brand-red transition-colors shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-            </svg>
-          </div>
-        </a>
-        <a href={`${base}/documents/Högt+värderat+låg+lön.pdf`} target="_blank" rel="noopener noreferrer"
-          class="block bg-white p-5 border-b border-gray-200 hover:shadow-md transition-shadow group">
-          <div class="flex items-center justify-between gap-4">
-            <div>
-              <span class="text-sm font-medium text-brand-red">2021</span>
-              <span class="ml-2 font-medium text-brand-text group-hover:text-brand-red transition-colors">Högt värderat – låg lön</span>
-              <span class="ml-2 text-sm text-brand-text/50">(Highly valued – low pay)</span>
+              <h3 class="font-medium text-brand-text group-hover:text-brand-red transition-colors">Highly valued — low pay</h3>
+              <p class="text-sm text-brand-text/60 mt-1">Our report on the structural wage gap between female-dominated and other occupations.</p>
             </div>
             <svg class="w-5 h-5 text-brand-text/30 group-hover:text-brand-red transition-colors shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -129,9 +169,33 @@ const base = import.meta.env.BASE_URL;
           </div>
         </a>
       </div>
-      <p class="text-brand-text/50 text-center text-sm mt-6">
-        Reports are published in Swedish. <a href={`${base}/#rapporter`} class="text-brand-red hover:text-brand-red-dark">View all reports →</a>
-      </p>
+    </div>
+  </section>
+
+  <!-- About Us -->
+  <section class="py-20 bg-brand-gray">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-medium text-brand-text uppercase tracking-wider mb-8 text-center">About us</h2>
+      <div class="max-w-3xl mx-auto">
+        <p class="text-brand-text/70 mb-4">
+          The Lönelotsarna team is a group of consultants with extensive experience, specialised
+          in wage formation, salary review and equal pay.
+        </p>
+        <p class="text-brand-text/70 mb-4">
+          We are also a non-profit organisation working for equal pay by developing methods,
+          raising awareness and driving the public debate on equal pay. We have developed the
+          Lonelots tool for job evaluation and provide it free of charge. We also publish
+          annual reports on the structural pay gap.
+        </p>
+        <p class="text-brand-text/70">
+          Read more about us in the newsletter Les Glorieuses:
+          <em>"Meet the Equal Pay Super Geeks who proved that midwives deserve the same pay as engineers"</em>,
+          published October 2024 — in
+          <a href="https://thegloriousletter.com/equal-pay-super-geeks/" target="_blank" rel="noopener noreferrer" class="text-brand-red hover:text-brand-red-dark">English</a>
+          and
+          <a href="https://lesglorieuses.fr/les-super-geeks/" target="_blank" rel="noopener noreferrer" class="text-brand-red hover:text-brand-red-dark">French</a>.
+        </p>
+      </div>
     </div>
   </section>
 
