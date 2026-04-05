@@ -1,0 +1,78 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Lönelotsarna – Jämställda löner genom kunskap och verktyg',
+  description = 'Lönelotsarna är en ideell förening som verkar för jämställda löner genom kunskap, opinion och verktyget Analys Lönelots.',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="https://use.typekit.net/FIXME.css" />
+    <title>{title}</title>
+  </head>
+  <body class="bg-white antialiased">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <a href="#">
+            <img src="/images/Lonelotslogga.png" alt="Lönelotsarna" class="h-8" />
+          </a>
+          <div class="hidden md:flex space-x-8">
+            <a href="#om-oss" class="text-brand-text/70 hover:text-brand-red transition-colors uppercase tracking-wider text-sm">Om oss</a>
+            <a href="#rapporter" class="text-brand-text/70 hover:text-brand-red transition-colors uppercase tracking-wider text-sm">Rapporter</a>
+            <a href="https://www.weightpoint.se/analys_lonelots" target="_blank" rel="noopener noreferrer" class="text-brand-text/70 hover:text-brand-red transition-colors uppercase tracking-wider text-sm">Analys Lönelots ↗</a>
+          </div>
+          <!-- Mobile menu button -->
+          <button
+            id="mobile-menu-btn"
+            class="md:hidden p-2 rounded-md text-brand-text/70 hover:text-brand-red"
+            aria-label="Öppna meny"
+          >
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden pb-4">
+          <a href="#om-oss" class="block py-2 text-brand-text/70 hover:text-brand-red uppercase tracking-wider text-sm">Om oss</a>
+          <a href="#rapporter" class="block py-2 text-brand-text/70 hover:text-brand-red uppercase tracking-wider text-sm">Rapporter</a>
+          <a href="https://www.weightpoint.se/analys_lonelots" target="_blank" rel="noopener noreferrer" class="block py-2 text-brand-text/70 hover:text-brand-red uppercase tracking-wider text-sm">Analys Lönelots ↗</a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="pt-16">
+      <slot />
+    </main>
+
+    <footer class="bg-brand-dark text-white/50 py-8">
+      <div class="max-w-6xl mx-auto px-4 text-center">
+        <p>&copy; {new Date().getFullYear()} Lönelotsarna</p>
+      </div>
+    </footer>
+
+    <!-- Mobile menu toggle -->
+    <script>
+      const btn = document.getElementById('mobile-menu-btn');
+      const menu = document.getElementById('mobile-menu');
+      btn?.addEventListener('click', () => menu?.classList.toggle('hidden'));
+      menu?.querySelectorAll('a').forEach((link) =>
+        link.addEventListener('click', () => menu?.classList.add('hidden'))
+      );
+    </script>
+  </body>
+</html>

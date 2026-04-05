@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+/* Lönelotsarna brand fonts (Adobe Fonts via Squarespace) */
+@import url("https://use.typekit.net/af/949f61/00000000000000007735ba5e/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2");
+
+@theme {
+  /* Brand colors */
+  --color-brand-red: #C00202;
+  --color-brand-red-dark: #9A0101;
+  --color-brand-red-light: #DC0404;
+  --color-brand-dark: #0F0F0F;
+  --color-brand-text: #050505;
+  --color-brand-gray: #fafafa;
+}
+
+/* Smooth scroll for anchor navigation */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Offset anchors for fixed nav */
+section[id] {
+  scroll-margin-top: 5rem;
+}
+
+/* Typography base */
+body {
+  font-family: 'proxima-nova', system-ui, -apple-system, sans-serif;
+  color: #050505;
+}
+
+/* Headings use uppercase + letter-spacing like the original */
+h2, h3 {
+  letter-spacing: 0.05em;
+}
