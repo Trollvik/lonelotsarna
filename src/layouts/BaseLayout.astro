@@ -4,6 +4,7 @@ import '../styles/global.css';
 interface Props {
   title?: string;
   description?: string;
+  lang?: 'sv' | 'en';
 }
 
 const base = import.meta.env.BASE_URL;
@@ -11,11 +12,29 @@ const base = import.meta.env.BASE_URL;
 const {
   title = 'Lönelotsarna – Jämställda löner genom kunskap och verktyg',
   description = 'Lönelotsarna är en ideell förening som verkar för jämställda löner genom kunskap, opinion och verktyget Analys Lönelots.',
+  lang = 'sv',
 } = Astro.props;
+
+const isEn = lang === 'en';
+const homeHref = isEn ? `${base}/en` : `${base}/`;
+const nav = isEn
+  ? [
+      { label: 'About', href: `${base}/en#about` },
+      { label: 'Reports', href: `${base}/en#reports` },
+      { label: 'Lonelots Tool', href: `${base}/en/analys-lonelots` },
+    ]
+  : [
+      { label: 'Om oss', href: `${base}/#om-oss` },
+      { label: 'Rapporter', href: `${base}/#rapporter` },
+      { label: 'Analys Lönelots', href: `${base}/analys-lonelots` },
+    ];
+const langSwitch = isEn
+  ? { label: 'Svenska', href: `${base}/` }
+  : { label: 'English', href: `${base}/en` };
 ---
 
 <!doctype html>
-<html lang="sv">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -28,19 +47,20 @@ const {
     <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16">
-          <a href={`${base}/`}>
+          <a href={homeHref}>
             <img src={`${base}/images/Lonelotslogga.png`} alt="Lönelotsarna" class="h-8" />
           </a>
-          <div class="hidden md:flex space-x-8">
-            <a href={`${base}/#om-oss`} class="text-brand-text/70 hover:text-brand-red transition-colors uppercase tracking-wider text-sm">Om oss</a>
-            <a href={`${base}/#rapporter`} class="text-brand-text/70 hover:text-brand-red transition-colors uppercase tracking-wider text-sm">Rapporter</a>
-            <a href={`${base}/analys-lonelots`} class="text-brand-text/70 hover:text-brand-red transition-colors uppercase tracking-wider text-sm">Analys Lönelots</a>
+          <div class="hidden md:flex items-center space-x-8">
+            {nav.map((item) => (
+              <a href={item.href} class="text-brand-text/70 hover:text-brand-red transition-colors uppercase tracking-wider text-sm">{item.label}</a>
+            ))}
+            <a href={langSwitch.href} class="text-brand-text/40 hover:text-brand-text/70 transition-colors text-sm">{langSwitch.label}</a>
           </div>
           <!-- Mobile menu button -->
           <button
             id="mobile-menu-btn"
             class="md:hidden p-2 rounded-md text-brand-text/70 hover:text-brand-red"
-            aria-label="Öppna meny"
+            aria-label={isEn ? 'Open menu' : 'Öppna meny'}
           >
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -49,9 +69,10 @@ const {
         </div>
         <!-- Mobile menu -->
         <div id="mobile-menu" class="hidden md:hidden pb-4">
-          <a href={`${base}/#om-oss`} class="block py-2 text-brand-text/70 hover:text-brand-red uppercase tracking-wider text-sm">Om oss</a>
-          <a href={`${base}/#rapporter`} class="block py-2 text-brand-text/70 hover:text-brand-red uppercase tracking-wider text-sm">Rapporter</a>
-          <a href={`${base}/analys-lonelots`} class="block py-2 text-brand-text/70 hover:text-brand-red uppercase tracking-wider text-sm">Analys Lönelots</a>
+          {nav.map((item) => (
+            <a href={item.href} class="block py-2 text-brand-text/70 hover:text-brand-red uppercase tracking-wider text-sm">{item.label}</a>
+          ))}
+          <a href={langSwitch.href} class="block py-2 text-brand-text/40 hover:text-brand-text/70 text-sm">{langSwitch.label}</a>
         </div>
       </div>
     </nav>

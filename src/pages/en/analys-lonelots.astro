@@ -1,0 +1,351 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout
+  lang="en"
+  title="Lonelots Tool – Job Evaluation and Pay Survey"
+  description="Lonelots is a free tool for job evaluation and pay survey based on the Swedish Discrimination Act."
+>
+
+  <!-- Hero -->
+  <section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+    <img src={`${base}/images/Analys-lönelots.jpg`} alt="" class="absolute inset-0 w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-brand-red/70"></div>
+    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+      <h1 class="text-3xl sm:text-4xl font-medium uppercase tracking-wider mb-6">
+        The Lonelots Tool
+      </h1>
+      <p class="text-lg text-white/90 max-w-3xl mx-auto mb-4">
+        A free and user-friendly tool for job evaluation and pay survey
+        in accordance with the Swedish Discrimination Act.
+      </p>
+      <p class="text-white/70 max-w-2xl mx-auto mb-8">
+        The tool consists of two parts: a weighted multi-factor job evaluation system to assess
+        which jobs are equivalent, and a pay survey function that provides the tables and charts
+        needed to map and analyse wages.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#download" class="inline-block bg-white text-brand-text font-medium px-8 py-3 uppercase tracking-wider text-sm hover:bg-brand-gray transition-colors">
+          Download
+        </a>
+        <a href="#job-evaluation" class="inline-block border-2 border-white text-white font-medium px-8 py-3 uppercase tracking-wider text-sm hover:bg-white/10 transition-colors">
+          Get started
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download -->
+  <section id="download" class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-medium text-brand-text uppercase tracking-wider mb-8 text-center">Download</h2>
+      <div class="max-w-2xl mx-auto">
+        <p class="text-brand-text/70 mb-6 text-center">
+          Version 7.1 — free for all organisations, large and small.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+          <a href="https://github.com/Trollvik/lonelotsarna/releases/latest/download/LoneLots-7.1.1.exe"
+            class="flex items-center justify-center gap-2 bg-brand-red text-white font-medium px-6 py-3 uppercase tracking-wider text-sm hover:bg-brand-red-dark transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+            Download for PC
+          </a>
+          <a href="https://github.com/Trollvik/lonelotsarna/releases/latest/download/lonelots-mac-7.1-arm64.dmg"
+            class="flex items-center justify-center gap-2 bg-brand-red text-white font-medium px-6 py-3 uppercase tracking-wider text-sm hover:bg-brand-red-dark transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+            Download for Mac
+          </a>
+        </div>
+        <div class="bg-amber-50 border-l-4 border-amber-400 p-4 mb-8">
+          <p class="text-sm text-amber-800">
+            <strong>Important!</strong> If you have used Lonelots before and have saved evaluations,
+            you must first make backups before installing the new version. Saved data is not
+            automatically transferred.
+          </p>
+        </div>
+        <details class="border-b border-gray-200 pb-4">
+          <summary class="cursor-pointer py-3 text-brand-text font-medium uppercase tracking-wider text-sm flex items-center justify-between hover:text-brand-red transition-colors">
+            Installation instructions
+            <svg class="w-5 h-5 shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
+          </summary>
+          <div class="pt-2 pb-4 text-brand-text/70">
+            <ol class="list-decimal list-inside space-y-2">
+              <li>Download the installation file above.</li>
+              <li>Double-click the downloaded file to install Lonelots.</li>
+              <li>Follow the instructions when the installer starts.</li>
+              <li>If you see "Windows has protected your computer" — click "More information" then "Run anyway".</li>
+              <li>An icon will be created on your desktop. Double-click to start.</li>
+            </ol>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Job Evaluation -->
+  <section id="job-evaluation" class="py-16 bg-brand-gray">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-medium text-brand-text uppercase tracking-wider mb-4 text-center">
+        <span class="text-brand-red">Part 1:</span> Job Evaluation
+      </h2>
+      <p class="text-brand-text/70 text-center max-w-3xl mx-auto mb-10">
+        The job evaluation system is based on the main areas of the Swedish Discrimination Act —
+        knowledge and skills, responsibility, effort, and working conditions. You customise the
+        system by adapting factors, levels, and weighting to your organisation.
+      </p>
+      <div class="space-y-0 max-w-3xl mx-auto">
+        <details class="group border-b border-gray-200 bg-white">
+          <summary class="cursor-pointer p-5 flex items-center gap-4 hover:bg-gray-50 transition-colors">
+            <span class="flex items-center justify-center w-8 h-8 rounded-full bg-brand-red text-white text-sm font-medium shrink-0">1</span>
+            <span class="font-medium text-brand-text uppercase tracking-wider text-sm">Preparation</span>
+            <svg class="w-5 h-5 ml-auto shrink-0 text-brand-text/40 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
+          </summary>
+          <div class="px-5 pb-5 pt-0 text-brand-text/70 text-sm leading-relaxed space-y-3">
+            <p>Decide who will participate and how the work should be organised. Compile information about the different positions to be evaluated.</p>
+            <p>The evaluation should be done by at least three people — women and men — with good knowledge of the organisation. They should not represent group interests but use their judgement and available documentation.</p>
+            <p>Agree with trade unions on how to collaborate. They should have the opportunity to participate in the pay survey, analysis, and action planning.</p>
+          </div>
+        </details>
+        <details class="group border-b border-gray-200 bg-white">
+          <summary class="cursor-pointer p-5 flex items-center gap-4 hover:bg-gray-50 transition-colors">
+            <span class="flex items-center justify-center w-8 h-8 rounded-full bg-brand-red text-white text-sm font-medium shrink-0">2</span>
+            <span class="font-medium text-brand-text uppercase tracking-wider text-sm">Adapt factor plan</span>
+            <svg class="w-5 h-5 ml-auto shrink-0 text-brand-text/40 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
+          </summary>
+          <div class="px-5 pb-5 pt-0 text-brand-text/70 text-sm leading-relaxed space-y-3">
+            <p>Factors can be added or removed. The number of levels can be adjusted between 2–7. The system is a basic model designed to be adapted to different organisations.</p>
+            <ul class="list-disc list-inside space-y-1">
+              <li>Review wording to match your organisation's values and direction.</li>
+              <li>Keep factors simple — less complexity makes evaluation easier.</li>
+              <li>If an aspect is particularly important, consider making it a separate factor.</li>
+            </ul>
+          </div>
+        </details>
+        <details class="group border-b border-gray-200 bg-white">
+          <summary class="cursor-pointer p-5 flex items-center gap-4 hover:bg-gray-50 transition-colors">
+            <span class="flex items-center justify-center w-8 h-8 rounded-full bg-brand-red text-white text-sm font-medium shrink-0">3</span>
+            <span class="font-medium text-brand-text uppercase tracking-wider text-sm">Weighting</span>
+            <svg class="w-5 h-5 ml-auto shrink-0 text-brand-text/40 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
+          </summary>
+          <div class="px-5 pb-5 pt-0 text-brand-text/70 text-sm leading-relaxed space-y-3">
+            <p>Weighting means balancing the different factors against each other. Distribute 100 percent between them to reflect what is valued in your organisation.</p>
+            <p>Weighting can be done after the evaluation — the evaluation process often provides better understanding of the factors' relative importance.</p>
+          </div>
+        </details>
+        <details class="group border-b border-gray-200 bg-white">
+          <summary class="cursor-pointer p-5 flex items-center gap-4 hover:bg-gray-50 transition-colors">
+            <span class="flex items-center justify-center w-8 h-8 rounded-full bg-brand-red text-white text-sm font-medium shrink-0">4</span>
+            <span class="font-medium text-brand-text uppercase tracking-wider text-sm">Jobs to evaluate</span>
+            <svg class="w-5 h-5 ml-auto shrink-0 text-brand-text/40 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
+          </summary>
+          <div class="px-5 pb-5 pt-0 text-brand-text/70 text-sm leading-relaxed space-y-3">
+            <p>Enter all jobs to be evaluated with an optional statistics code. You can write or paste a job description in the text field.</p>
+            <p>Use the "Classification" feature to divide the evaluation into smaller groups if you have many different jobs.</p>
+          </div>
+        </details>
+        <details class="group border-b border-gray-200 bg-white">
+          <summary class="cursor-pointer p-5 flex items-center gap-4 hover:bg-gray-50 transition-colors">
+            <span class="flex items-center justify-center w-8 h-8 rounded-full bg-brand-red text-white text-sm font-medium shrink-0">5</span>
+            <span class="font-medium text-brand-text uppercase tracking-wider text-sm">Evaluation sheets</span>
+            <svg class="w-5 h-5 ml-auto shrink-0 text-brand-text/40 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
+          </summary>
+          <div class="px-5 pb-5 pt-0 text-brand-text/70 text-sm leading-relaxed space-y-3">
+            <p>All jobs are shown in evaluation sheets where the evaluation is done factor by factor. Write a brief justification for each placement.</p>
+            <p>It is the job requirements — not the individual's ability — that should be evaluated. Remember to save regularly and make backups.</p>
+          </div>
+        </details>
+        <details class="group border-b border-gray-200 bg-white">
+          <summary class="cursor-pointer p-5 flex items-center gap-4 hover:bg-gray-50 transition-colors">
+            <span class="flex items-center justify-center w-8 h-8 rounded-full bg-brand-red text-white text-sm font-medium shrink-0">6</span>
+            <span class="font-medium text-brand-text uppercase tracking-wider text-sm">Results</span>
+            <svg class="w-5 h-5 ml-auto shrink-0 text-brand-text/40 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
+          </summary>
+          <div class="px-5 pb-5 pt-0 text-brand-text/70 text-sm leading-relaxed space-y-3">
+            <p>Review the unweighted and weighted scores. Does the result reflect your organisation's intentions? Have the Discrimination Act requirements been met?</p>
+            <p>The analysis may lead to changes in factor content, weighting adjustments, or re-evaluation of specific assessments.</p>
+          </div>
+        </details>
+        <details class="group border-b border-gray-200 bg-white">
+          <summary class="cursor-pointer p-5 flex items-center gap-4 hover:bg-gray-50 transition-colors">
+            <span class="flex items-center justify-center w-8 h-8 rounded-full bg-brand-red text-white text-sm font-medium shrink-0">7</span>
+            <span class="font-medium text-brand-text uppercase tracking-wider text-sm">Grouping equivalent jobs</span>
+            <svg class="w-5 h-5 ml-auto shrink-0 text-brand-text/40 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
+          </summary>
+          <div class="px-5 pb-5 pt-0 text-brand-text/70 text-sm leading-relaxed space-y-3">
+            <p>Divide the results into score intervals or clusters. Jobs within the same interval are considered equivalent. A suitable interval is typically 5 to 10 points.</p>
+            <p>When the overall result is considered fair and reasonable, it is time for the pay survey.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pay Survey -->
+  <section id="pay-survey" class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-medium text-brand-text uppercase tracking-wider mb-4 text-center">
+        <span class="text-brand-red">Part 2:</span> Pay Survey
+      </h2>
+      <p class="text-brand-text/70 text-center max-w-3xl mx-auto mb-10">
+        The pay survey tool provides the groupings and calculations required to conduct a pay survey
+        in accordance with the Swedish Discrimination Act.
+      </p>
+      <div class="space-y-0 max-w-3xl mx-auto">
+        <details class="group border-b border-gray-200 bg-brand-gray">
+          <summary class="cursor-pointer p-5 flex items-center gap-4 hover:bg-gray-100 transition-colors">
+            <span class="flex items-center justify-center w-8 h-8 rounded-full bg-brand-red text-white text-sm font-medium shrink-0">1</span>
+            <span class="font-medium text-brand-text uppercase tracking-wider text-sm">Analyse practices and regulations</span>
+            <svg class="w-5 h-5 ml-auto shrink-0 text-brand-text/40 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
+          </summary>
+          <div class="px-5 pb-5 pt-0 text-brand-text/70 text-sm leading-relaxed space-y-3">
+            <p>Start by evaluating the previous year's action plan. Then review pay regulations — collective agreements, pay policy, criteria for individual pay setting, bonuses, and benefits.</p>
+            <p>The review should determine whether rules are gender-neutral and applied equally to women and men.</p>
+          </div>
+        </details>
+        <details class="group border-b border-gray-200 bg-brand-gray">
+          <summary class="cursor-pointer p-5 flex items-center gap-4 hover:bg-gray-100 transition-colors">
+            <span class="flex items-center justify-center w-8 h-8 rounded-full bg-brand-red text-white text-sm font-medium shrink-0">2</span>
+            <span class="font-medium text-brand-text uppercase tracking-wider text-sm">Prepare salary data</span>
+            <svg class="w-5 h-5 ml-auto shrink-0 text-brand-text/40 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
+          </summary>
+          <div class="px-5 pb-5 pt-0 text-brand-text/70 text-sm leading-relaxed space-y-3">
+            <p>Create an Excel salary file with employee and pay data. Required columns: personal ID number (10 digits, penultimate digit indicates gender), job title or statistics code, group (if not using Lonelots evaluation), and full-time monthly salary.</p>
+          </div>
+        </details>
+        <details class="group border-b border-gray-200 bg-brand-gray">
+          <summary class="cursor-pointer p-5 flex items-center gap-4 hover:bg-gray-100 transition-colors">
+            <span class="flex items-center justify-center w-8 h-8 rounded-full bg-brand-red text-white text-sm font-medium shrink-0">3</span>
+            <span class="font-medium text-brand-text uppercase tracking-wider text-sm">Create pay survey</span>
+            <svg class="w-5 h-5 ml-auto shrink-0 text-brand-text/40 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
+          </summary>
+          <div class="px-5 pb-5 pt-0 text-brand-text/70 text-sm leading-relaxed space-y-3">
+            <p>Import the salary file. If you have done a job evaluation in Lonelots, link it by choosing "Use groups from current job evaluation". Otherwise, specify groups in the Excel file.</p>
+          </div>
+        </details>
+        <details class="group border-b border-gray-200 bg-brand-gray">
+          <summary class="cursor-pointer p-5 flex items-center gap-4 hover:bg-gray-100 transition-colors">
+            <span class="flex items-center justify-center w-8 h-8 rounded-full bg-brand-red text-white text-sm font-medium shrink-0">4</span>
+            <span class="font-medium text-brand-text uppercase tracking-wider text-sm">Analyse equal work</span>
+            <svg class="w-5 h-5 ml-auto shrink-0 text-brand-text/40 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
+          </summary>
+          <div class="px-5 pb-5 pt-0 text-brand-text/70 text-sm leading-relaxed space-y-3">
+            <p>Analyse differences in pay, pay distribution, and pay development for women and men doing equal work. All pay differences must be explained with objective reasons unrelated to gender.</p>
+          </div>
+        </details>
+        <details class="group border-b border-gray-200 bg-brand-gray">
+          <summary class="cursor-pointer p-5 flex items-center gap-4 hover:bg-gray-100 transition-colors">
+            <span class="flex items-center justify-center w-8 h-8 rounded-full bg-brand-red text-white text-sm font-medium shrink-0">5</span>
+            <span class="font-medium text-brand-text uppercase tracking-wider text-sm">Analyse equivalent work</span>
+            <svg class="w-5 h-5 ml-auto shrink-0 text-brand-text/40 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
+          </summary>
+          <div class="px-5 pb-5 pt-0 text-brand-text/70 text-sm leading-relaxed space-y-3">
+            <p>Compare pay in female-dominated jobs with non-female-dominated jobs in the same equivalence group. A job is considered female-dominated if more than 60% of workers are women.</p>
+          </div>
+        </details>
+        <details class="group border-b border-gray-200 bg-brand-gray">
+          <summary class="cursor-pointer p-5 flex items-center gap-4 hover:bg-gray-100 transition-colors">
+            <span class="flex items-center justify-center w-8 h-8 rounded-full bg-brand-red text-white text-sm font-medium shrink-0">6</span>
+            <span class="font-medium text-brand-text uppercase tracking-wider text-sm">Document</span>
+            <svg class="w-5 h-5 ml-auto shrink-0 text-brand-text/40 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
+          </summary>
+          <div class="px-5 pb-5 pt-0 text-brand-text/70 text-sm leading-relaxed space-y-3">
+            <p>Employers with at least ten employees must document the pay survey. Documentation should include results, required adjustments, cost estimates, and a timeline. Adjustments must be implemented within three years.</p>
+          </div>
+        </details>
+        <details class="group border-b border-gray-200 bg-brand-gray">
+          <summary class="cursor-pointer p-5 flex items-center gap-4 hover:bg-gray-100 transition-colors">
+            <span class="flex items-center justify-center w-8 h-8 rounded-full bg-brand-red text-white text-sm font-medium shrink-0">7</span>
+            <span class="font-medium text-brand-text uppercase tracking-wider text-sm">Areas of use</span>
+            <svg class="w-5 h-5 ml-auto shrink-0 text-brand-text/40 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
+          </summary>
+          <div class="px-5 pb-5 pt-0 text-brand-text/70 text-sm leading-relaxed space-y-3">
+            <p><strong>Equal pay</strong> — Annual pay surveys discover, correct, and prevent unjustified pay differences.</p>
+            <p><strong>Pay criteria</strong> — A tailored job evaluation system provides a good basis for individual pay criteria and better quality salary conversations.</p>
+            <p><strong>Organisational development</strong> — The analysis highlights ambiguities in work organisation and accountability.</p>
+            <p><strong>Attractive employer</strong> — An equal-pay employer attracts talent and gives employees confidence in their development and expectations.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Handbook -->
+  <section class="py-12 bg-brand-gray">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl font-medium text-brand-text uppercase tracking-wider mb-4">Handbook</h2>
+      <p class="text-brand-text/70 mb-6">
+        The handbook provides step-by-step instructions for conducting a pay survey
+        and adapting the job evaluation system to your organisation. Available in Swedish.
+      </p>
+      <a href={`${base}/documents/Handbok+till+Analys+Lönelots.pdf`} target="_blank" rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 bg-brand-red text-white font-medium px-6 py-3 uppercase tracking-wider text-sm hover:bg-brand-red-dark transition-colors">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+        Download handbook (PDF, Swedish)
+      </a>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-medium text-brand-text uppercase tracking-wider mb-8 text-center">FAQ</h2>
+      <div class="space-y-0 max-w-3xl mx-auto">
+        <details class="group border-b border-gray-200">
+          <summary class="cursor-pointer py-4 font-medium text-brand-text text-sm flex items-center justify-between hover:text-brand-red transition-colors">
+            What does Lonelots cost?
+            <svg class="w-5 h-5 shrink-0 text-brand-text/40 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
+          </summary>
+          <div class="pb-4 text-brand-text/70 text-sm">Nothing! Lonelots is completely free to download and use.</div>
+        </details>
+        <details class="group border-b border-gray-200">
+          <summary class="cursor-pointer py-4 font-medium text-brand-text text-sm flex items-center justify-between hover:text-brand-red transition-colors">
+            Where is data stored?
+            <svg class="w-5 h-5 shrink-0 text-brand-text/40 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
+          </summary>
+          <div class="pb-4 text-brand-text/70 text-sm">All data is stored locally on your computer. No information is sent to external services. Only you have access to reports you create.</div>
+        </details>
+        <details class="group border-b border-gray-200">
+          <summary class="cursor-pointer py-4 font-medium text-brand-text text-sm flex items-center justify-between hover:text-brand-red transition-colors">
+            Can Lonelots help with EU Pay Transparency Directive reporting?
+            <svg class="w-5 h-5 shrink-0 text-brand-text/40 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
+          </summary>
+          <div class="pb-4 text-brand-text/70 text-sm">Yes. Lonelots includes features that provide the data points required by the EU Pay Transparency Directive. Contact <a href="mailto:info@lonelotsarna.se" class="text-brand-red hover:text-brand-red-dark">info@lonelotsarna.se</a> for details.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Support -->
+  <section class="py-16 bg-brand-gray">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12 max-w-3xl mx-auto">
+        <div>
+          <h3 class="text-lg font-medium text-brand-text uppercase tracking-wider mb-4">Demo</h3>
+          <p class="text-brand-text/70 text-sm mb-3">
+            We hold monthly open demos of the Lonelots tool via Zoom. Demos in English can be arranged on request.
+          </p>
+          <p class="text-brand-text/70 text-sm">
+            Contact us at <a href="mailto:info@lonelotsarna.se" class="text-brand-red hover:text-brand-red-dark">info@lonelotsarna.se</a>.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-lg font-medium text-brand-text uppercase tracking-wider mb-4">Support</h3>
+          <p class="text-brand-text/70 text-sm mb-3">
+            Technical support is free of charge.
+          </p>
+          <p class="text-sm">
+            <a href="mailto:support@lonelots.se" class="text-brand-red hover:text-brand-red-dark">support@lonelots.se</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  details[open] > summary svg:last-child {
+    transform: rotate(45deg);
+  }
+</style>
