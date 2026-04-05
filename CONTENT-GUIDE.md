@@ -97,7 +97,7 @@ Rapportlistan styrs av filen `src/data/reports.json`. Varje rapport har fyra fä
   "title": "Rapportens titel",
   "year": "2025",
   "summary": "En kort sammanfattning av rapporten.",
-  "file": "/documents/Filnamn+med+plus+för+mellanslag.pdf"
+  "file": "/documents/rapportens-titel.pdf"
 }
 ```
 
@@ -108,7 +108,7 @@ Rapportlistan styrs av filen `src/data/reports.json`. Varje rapport har fyra fä
 3. Klicka pennikonen (✏️)
 4. Kopiera blocket ovan och klistra in det **överst** i listan (efter första `[`)
 5. Ändra titel, år, sammanfattning och filnamn
-6. **Viktigt:** Filnamnet i `file` måste använda `+` istället för mellanslag
+6. **Viktigt:** Filnamnet i `file` ska vara med bindestreck och små bokstäver, t.ex. `rapportens-titel.pdf`
 7. Klicka **Commit changes**
 
 **Tips:** Om sidan kraschar efter din ändring har du troligen glömt ett komma eller en `"`. Kontakta Emil så fixar han det snabbt.
