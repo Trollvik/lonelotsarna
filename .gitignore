@@ -17,6 +17,9 @@ pnpm-debug.log*
 .env
 .env.production
 
+# large binaries (hosted via GitHub Releases)
+public/downloads/
+
 # macOS-specific files
 .DS_Store
 
