@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import reports from '../../data/reports-en.json';
 const base = import.meta.env.BASE_URL;
 ---
 
@@ -110,19 +111,28 @@ const base = import.meta.env.BASE_URL;
         occupations across sectors and assessing them using the Lonelots job evaluation tool.
       </p>
 
-      <div class="max-w-3xl mx-auto">
-        <a href={`${base}/documents/highly-valued-low-pay.pdf`} target="_blank" rel="noopener noreferrer"
-          class="block bg-white p-6 border-b border-gray-200 hover:shadow-md transition-shadow group">
-          <div class="flex items-center justify-between gap-4">
-            <div>
-              <h3 class="font-medium text-brand-text group-hover:text-brand-red transition-colors">Highly valued – low pay</h3>
-              <p class="text-sm text-brand-text/60 mt-1">Our report on the structural wage gap between female-dominated and other equivalent occupations.</p>
+      <div class="max-w-3xl mx-auto space-y-4">
+        {reports.map((report) => (
+          <a
+            href={`${base}${report.file}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block bg-white p-6 border-b border-gray-200 hover:shadow-md transition-shadow group"
+          >
+            <div class="flex items-start justify-between gap-4">
+              <div class="flex-1">
+                <div class="flex items-center gap-3 mb-2">
+                  <span class="text-sm font-medium text-brand-red">{report.year}</span>
+                  <h3 class="text-base font-medium text-brand-text group-hover:text-brand-red transition-colors">{report.title}</h3>
+                </div>
+                <p class="text-brand-text/60 text-sm">{report.summary}</p>
+              </div>
+              <svg class="w-5 h-5 text-brand-text/30 group-hover:text-brand-red transition-colors shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
             </div>
-            <svg class="w-5 h-5 text-brand-text/30 group-hover:text-brand-red transition-colors shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-            </svg>
-          </div>
-        </a>
+          </a>
+        ))}
       </div>
     </div>
   </section>

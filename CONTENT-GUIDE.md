@@ -63,7 +63,8 @@ Du behöver **inte** kunna HTML eller programmering för att redigera texter.
 |-----|------------------|
 | `src/components/Hero.astro` | Rubriken och texten på startsidan |
 | `src/components/About.astro` | Texterna under "Om oss" |
-| `src/data/reports.json` | Rapportlistan (titel, år, sammanfattning, filnamn) |
+| `src/data/reports.json` | Svenska rapportlistan (titel, år, sammanfattning, filnamn) |
+| `src/data/reports-en.json` | Engelska rapportlistan (samma format) |
 | `src/pages/analys-lonelots.astro` | Brödtext i accordion-stegen (Arbetsvärdering, Lönekartläggning, FAQ) |
 | `src/pages/en/index.astro` | Engelska texter (Om oss, Kontakt) |
 | `src/pages/en/analys-lonelots.astro` | Engelska brödtexter i accordion-stegen |
@@ -115,7 +116,12 @@ Rapportlistan styrs av filen `src/data/reports.json`. Varje rapport har fyra fä
 
 ### Svenska vs engelska
 
-Instruktionerna ovan gäller den **svenska rapportlistan** på startsidan. Den engelska sidan (`src/pages/en/index.astro`) har en separat rapportlänk som inte styrs av `reports.json`. Kontakta Emil om den engelska sidan behöver uppdateras.
+| Språk | Fil |
+|-------|-----|
+| Svenska | `src/data/reports.json` |
+| Engelska | `src/data/reports-en.json` |
+
+Stegen är identiska för båda. Redigera rätt fil beroende på språk.
 
 ---
 
