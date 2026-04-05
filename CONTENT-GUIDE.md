@@ -63,6 +63,7 @@ Du behöver **inte** kunna HTML eller programmering för att redigera texter.
 |-----|------------------|
 | `src/components/Hero.astro` | Rubriken och texten på startsidan |
 | `src/components/About.astro` | Texterna under "Om oss" |
+| `src/data/reports.json` | Rapportlistan (titel, år, sammanfattning, filnamn) |
 | `src/pages/analys-lonelots.astro` | Brödtext i accordion-stegen (Arbetsvärdering, Lönekartläggning, FAQ) |
 | `src/pages/en/index.astro` | Engelska texter (Om oss, Kontakt) |
 | `src/pages/en/analys-lonelots.astro` | Engelska brödtexter i accordion-stegen |
@@ -72,7 +73,7 @@ Du behöver **inte** kunna HTML eller programmering för att redigera texter.
 | Fil | Varför |
 |-----|--------|
 | `src/layouts/BaseLayout.astro` | Styr navigation, footer och SEO för hela sajten. Fel här kraschar alla sidor. |
-| `src/components/Reports.astro` | Rapportlistan är kod (JavaScript). Ett borttaget komma kraschar sidan. |
+| `src/components/Reports.astro` | Styr hur rapporterna visas. Datan redigeras i `src/data/reports.json`. |
 | `src/pages/index.astro` | Innehåller bara import-rader — texterna redigeras i komponentfilerna ovan. |
 | Nedladdningslänkar i analys-sidorna | URL:erna måste matcha filnamnen i GitHub Releases exakt. |
 
@@ -87,6 +88,33 @@ Du behöver **inte** kunna HTML eller programmering för att redigera texter.
 
 ---
 
+## Lägga till en ny rapport
+
+Rapportlistan styrs av filen `src/data/reports.json`. Varje rapport har fyra fält:
+
+```json
+{
+  "title": "Rapportens titel",
+  "year": "2025",
+  "summary": "En kort sammanfattning av rapporten.",
+  "file": "/documents/Filnamn+med+plus+för+mellanslag.pdf"
+}
+```
+
+### Steg för steg
+
+1. Ladda först upp PDF-filen till `public/documents/` (se nästa avsnitt)
+2. Öppna `src/data/reports.json` på GitHub
+3. Klicka pennikonen (✏️)
+4. Kopiera blocket ovan och klistra in det **överst** i listan (efter första `[`)
+5. Ändra titel, år, sammanfattning och filnamn
+6. **Viktigt:** Filnamnet i `file` måste använda `+` istället för mellanslag
+7. Klicka **Commit changes**
+
+**Tips:** Om sidan kraschar efter din ändring har du troligen glömt ett komma eller en `"`. Kontakta Emil så fixar han det snabbt.
+
+---
+
 ## Ladda upp ett nytt dokument (PDF)
 
 1. Gå till mappen `public/documents/` i repot
@@ -95,7 +123,7 @@ Du behöver **inte** kunna HTML eller programmering för att redigera texter.
 4. Klicka **Commit changes**
 5. Dokumentet finns nu på `[sajt-url]/documents/filnamn.pdf`
 
-**OBS:** Dokumentet blir tillgängligt via URL men syns inte automatiskt i rapportlistan på sajten. Rapportlistan styrs av kod i `src/components/Reports.astro` — **kontakta Emil** för att lägga till en ny rapport där.
+**OBS:** Dokumentet blir tillgängligt via URL men syns inte automatiskt i rapportlistan. För att lägga till det i listan, följ instruktionerna under "Lägga till en ny rapport" ovan.
 
 ---
 
@@ -169,6 +197,7 @@ Sajten använder GoatCounter (cookie-fritt, GDPR-vänligt).
 ```
 src/
 ├── components/        # Återanvändbara delar (hero, om oss, rapporter)
+├── data/              # Rapportlista (reports.json)
 ├── layouts/           # Sidlayout (navigation, footer)
 ├── pages/             # Varje fil = en sida
 │   ├── index.astro          # Startsidan (svenska)
