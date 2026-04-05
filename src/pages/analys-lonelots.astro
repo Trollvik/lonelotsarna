@@ -1,0 +1,483 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Analys Lönelots – Verktyg för arbetsvärdering och lönekartläggning"
+  description="Analys Lönelots är ett kostnadsfritt verktyg för arbetsvärdering och lönekartläggning enligt diskrimineringslagen."
+>
+
+  <!-- Hero -->
+  <section class="bg-brand-red text-white py-16 sm:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-3xl sm:text-4xl font-medium uppercase tracking-wider mb-6">
+        Analys Lönelots
+      </h1>
+      <p class="text-lg text-white/90 max-w-3xl mx-auto mb-4">
+        Ett kostnadsfritt och användarvänligt verktyg för en kvalitativ och effektiv lönekartläggning enligt diskrimineringslagen.
+      </p>
+      <p class="text-white/70 max-w-2xl mx-auto mb-8">
+        Analys Lönelots består av två delar: ett arbetsvärderingssystem för att bedöma vilka arbeten
+        som är likvärdiga och en lönekartläggningsfunktion som ger de tabeller och diagram som behövs
+        för att kartlägga och analysera löner.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#ladda-ner" class="inline-block bg-white text-brand-text font-medium px-8 py-3 uppercase tracking-wider text-sm hover:bg-brand-gray transition-colors">
+          Ladda ner
+        </a>
+        <a href="#arbetsvardering" class="inline-block border-2 border-white text-white font-medium px-8 py-3 uppercase tracking-wider text-sm hover:bg-white/10 transition-colors">
+          Kom igång
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ladda ner -->
+  <section id="ladda-ner" class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-medium text-brand-text uppercase tracking-wider mb-8 text-center">Ladda ner</h2>
+
+      <div class="max-w-2xl mx-auto">
+        <p class="text-brand-text/70 mb-6 text-center">
+          Version 7.1 — kostnadsfri för alla organisationer, stora som små.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+          <a href="https://www.weightpoint.se/analys_lonelots" target="_blank" rel="noopener noreferrer"
+            class="flex items-center justify-center gap-2 bg-brand-red text-white font-medium px-6 py-3 uppercase tracking-wider text-sm hover:bg-brand-red-dark transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+            Ladda ner för PC
+          </a>
+          <a href="https://www.weightpoint.se/analys_lonelots" target="_blank" rel="noopener noreferrer"
+            class="flex items-center justify-center gap-2 bg-brand-red text-white font-medium px-6 py-3 uppercase tracking-wider text-sm hover:bg-brand-red-dark transition-colors">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+            Ladda ner för Mac
+          </a>
+        </div>
+
+        <div class="bg-amber-50 border-l-4 border-amber-400 p-4 mb-8">
+          <p class="text-sm text-amber-800">
+            <strong>Viktigt!</strong> Om du använt Analys Lönelots tidigare och har sparade arbetsvärderingar
+            måste du först göra säkerhetskopior och spara dem på din dator. De förs inte automatiskt
+            över till den nya versionen.
+          </p>
+        </div>
+
+        <details class="border-b border-gray-200 pb-4">
+          <summary class="cursor-pointer py-3 text-brand-text font-medium uppercase tracking-wider text-sm flex items-center justify-between hover:text-brand-red transition-colors">
+            Installationsinstruktioner
+            <svg class="w-5 h-5 shrink-0 transition-transform details-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
+          </summary>
+          <div class="pt-2 pb-4 text-brand-text/70">
+            <ol class="list-decimal list-inside space-y-2">
+              <li>Ladda ner installationsfilen ovan.</li>
+              <li>Dubbelklicka på den nedladdade filen för att installera Analys Lönelots.</li>
+              <li>Följ instruktionerna när installationsprogrammet startat.</li>
+              <li>Om du får meddelandet "Windows har skyddat datorn" — klicka på "Mer information" och sedan "Kör ändå".</li>
+              <li>En ikon skapas på ditt skrivbord. Dubbelklicka för att starta programmet.</li>
+            </ol>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Arbetsvärdering -->
+  <section id="arbetsvardering" class="py-16 bg-brand-gray">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-medium text-brand-text uppercase tracking-wider mb-4 text-center">
+        <span class="text-brand-red">Del 1:</span> Arbetsvärdering
+      </h2>
+      <p class="text-brand-text/70 text-center max-w-3xl mx-auto mb-10">
+        Med Analys Lönelots arbetsvärdering skräddarsyr du systemet till just er verksamhet genom att anpassa
+        faktorer, nivåer och viktning. Systemet utgår från diskrimineringslagens huvudområden:
+        kunskaper och färdigheter, ansvar, ansträngning och arbetsförhållanden.
+      </p>
+
+      <div class="space-y-0 max-w-3xl mx-auto">
+        <!-- Steg 1 -->
+        <details class="group border-b border-gray-200 bg-white">
+          <summary class="cursor-pointer p-5 flex items-center gap-4 hover:bg-gray-50 transition-colors">
+            <span class="flex items-center justify-center w-8 h-8 rounded-full bg-brand-red text-white text-sm font-medium shrink-0">1</span>
+            <span class="font-medium text-brand-text uppercase tracking-wider text-sm">Förberedelser</span>
+            <svg class="w-5 h-5 ml-auto shrink-0 text-brand-text/40 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
+          </summary>
+          <div class="px-5 pb-5 pt-0 text-brand-text/70 text-sm leading-relaxed space-y-3">
+            <p>Innan ni sätter igång bör ni bestämma vilka som ska delta i arbetet och hur det ska organiseras. Sammanställ information om de olika befattningarna som ska värderas.</p>
+            <p>Om det inte finns arbetsbeskrivningar, kan ni behöva ta fram sådana eller finna andra sätt att systematiskt beskriva krav som ställs i olika arbeten. Alla arbeten bör beskrivas lika omsorgsfullt.</p>
+            <p>Arbetsvärderingen bör göras av minst tre personer, kvinnor och män, med god kännedom om organisationen. De ska inte representera gruppintressen utan ska med sitt omdöme och tillgänglig dokumentation avgöra på vilken svårighetsnivå varje arbete ska inplaceras.</p>
+            <p>Kom överens med de fackliga organisationerna om hur samverkan ska gå till. Facken ska ha möjlighet att delta vid lönekartläggningen, analysen och i arbetet med att fastställa åtgärdsplan.</p>
+          </div>
+        </details>
+
+        <!-- Steg 2 -->
+        <details class="group border-b border-gray-200 bg-white">
+          <summary class="cursor-pointer p-5 flex items-center gap-4 hover:bg-gray-50 transition-colors">
+            <span class="flex items-center justify-center w-8 h-8 rounded-full bg-brand-red text-white text-sm font-medium shrink-0">2</span>
+            <span class="font-medium text-brand-text uppercase tracking-wider text-sm">Anpassa faktorplan och faktorbeskrivningar</span>
+            <svg class="w-5 h-5 ml-auto shrink-0 text-brand-text/40 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
+          </summary>
+          <div class="px-5 pb-5 pt-0 text-brand-text/70 text-sm leading-relaxed space-y-3">
+            <p>I Faktorplan kan faktorer läggas till eller tas bort. Antalet nivåer kan justeras till mellan 2–7. Systemet är konstruerat som en grundmodell som ska anpassas till olika verksamheter.</p>
+            <ul class="list-disc list-inside space-y-1">
+              <li>Se över ordval så att formuleringar stämmer överens med organisationens inriktning och värdegrund.</li>
+              <li>Ju mindre sammansatt en faktor är desto lättare är det att göra värderingen.</li>
+              <li>Om en aspekt beskriver krav som är särskilt viktiga kan den göras till en egen faktor — kontrollera att samma krav inte bedöms två gånger.</li>
+              <li>Om en faktor inte behövs kan den tas bort. Kontrollera att den inte bedömer kraven i någon förekommande arbetsuppgift.</li>
+            </ul>
+            <p>I Faktorbeskrivningar kan beskrivningen av faktorer ändras och definitioner av svårighetsnivåer justeras.</p>
+          </div>
+        </details>
+
+        <!-- Steg 3 -->
+        <details class="group border-b border-gray-200 bg-white">
+          <summary class="cursor-pointer p-5 flex items-center gap-4 hover:bg-gray-50 transition-colors">
+            <span class="flex items-center justify-center w-8 h-8 rounded-full bg-brand-red text-white text-sm font-medium shrink-0">3</span>
+            <span class="font-medium text-brand-text uppercase tracking-wider text-sm">Viktning</span>
+            <svg class="w-5 h-5 ml-auto shrink-0 text-brand-text/40 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
+          </summary>
+          <div class="px-5 pb-5 pt-0 text-brand-text/70 text-sm leading-relaxed space-y-3">
+            <p>Viktning innebär att väga de olika faktorerna mot varandra och bestämma deras inbördes inflytande. Viktningen påverkar slutresultatet och ska spegla vad som värderas i den aktuella verksamheten.</p>
+            <p>Bestäm varje faktors vikt genom att fördela 100 procent mellan dem. Om man låter bli att vikta innebär det att varje faktor väger lika tungt.</p>
+            <ul class="list-disc list-inside space-y-1">
+              <li>Rangordna först faktorerna efter deras betydelse för organisationen.</li>
+              <li>Faktorer med vikt på 5% eller lägre bör ha färre nivåer. Faktorer med hög vikt kan behöva fler nivåer.</li>
+              <li>Viktningen kan göras efter arbetsvärderingen — värderingsarbetet ger ofta bättre förståelse av faktorernas inbördes förhållanden.</li>
+            </ul>
+          </div>
+        </details>
+
+        <!-- Steg 4 -->
+        <details class="group border-b border-gray-200 bg-white">
+          <summary class="cursor-pointer p-5 flex items-center gap-4 hover:bg-gray-50 transition-colors">
+            <span class="flex items-center justify-center w-8 h-8 rounded-full bg-brand-red text-white text-sm font-medium shrink-0">4</span>
+            <span class="font-medium text-brand-text uppercase tracking-wider text-sm">Arbeten att värdera</span>
+            <svg class="w-5 h-5 ml-auto shrink-0 text-brand-text/40 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
+          </summary>
+          <div class="px-5 pb-5 pt-0 text-brand-text/70 text-sm leading-relaxed space-y-3">
+            <p>Under Värdering → Arbeten att värdera skrivs alla arbeten in med en statistikkod (ej obligatoriskt). Du kan skriva eller kopiera in en arbetsbeskrivning i textrutan.</p>
+            <p>Funktionen "Indelning" finns till för verksamheter med många olika arbeten som vill dela upp värderingen. Ett tips är att lägga in arbeten inom en indelning i taget och värdera dem innan du startar med en ny.</p>
+          </div>
+        </details>
+
+        <!-- Steg 5 -->
+        <details class="group border-b border-gray-200 bg-white">
+          <summary class="cursor-pointer p-5 flex items-center gap-4 hover:bg-gray-50 transition-colors">
+            <span class="flex items-center justify-center w-8 h-8 rounded-full bg-brand-red text-white text-sm font-medium shrink-0">5</span>
+            <span class="font-medium text-brand-text uppercase tracking-wider text-sm">Värderingsblad</span>
+            <svg class="w-5 h-5 ml-auto shrink-0 text-brand-text/40 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
+          </summary>
+          <div class="px-5 pb-5 pt-0 text-brand-text/70 text-sm leading-relaxed space-y-3">
+            <p>Alla arbeten visas i Värderingsblad där arbetsvärderingen görs faktor för faktor med en enkel klickning. Skriv en kort motivering till nivåplacering för respektive arbete och faktor.</p>
+            <p>Alla arbeten ska värderas under en faktor innan man går vidare till nästa.</p>
+            <ul class="list-disc list-inside space-y-1">
+              <li>Det är arbetets krav — inte individens förmåga — som ska värderas.</li>
+              <li>Det kan vara bra att tillfälligt lämna en faktor om det inte går att komma fram till rätt nivå.</li>
+              <li>Tänk på att regelbundet spara värderingen och ta en säkerhetskopia.</li>
+            </ul>
+          </div>
+        </details>
+
+        <!-- Steg 6 -->
+        <details class="group border-b border-gray-200 bg-white">
+          <summary class="cursor-pointer p-5 flex items-center gap-4 hover:bg-gray-50 transition-colors">
+            <span class="flex items-center justify-center w-8 h-8 rounded-full bg-brand-red text-white text-sm font-medium shrink-0">6</span>
+            <span class="font-medium text-brand-text uppercase tracking-wider text-sm">Resultat: oviktade och viktade poäng</span>
+            <svg class="w-5 h-5 ml-auto shrink-0 text-brand-text/40 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
+          </summary>
+          <div class="px-5 pb-5 pt-0 text-brand-text/70 text-sm leading-relaxed space-y-3">
+            <p>När värderingsarbetet är avslutat ska resultatet analyseras. Tabell för oviktade poäng ger en samlad översikt av poängen före viktning. Tabell för viktade poäng ger motsvarande översikt efter viktning.</p>
+            <p>Fråga er: Speglar resultatet organisationens intentioner och värderingar? Har diskrimineringslagens bestämmelser beaktats? Analysen kan leda till att innehåll i faktorer ändras, viktningen justeras, eller att värderingar granskas.</p>
+          </div>
+        </details>
+
+        <!-- Steg 7 -->
+        <details class="group border-b border-gray-200 bg-white">
+          <summary class="cursor-pointer p-5 flex items-center gap-4 hover:bg-gray-50 transition-colors">
+            <span class="flex items-center justify-center w-8 h-8 rounded-full bg-brand-red text-white text-sm font-medium shrink-0">7</span>
+            <span class="font-medium text-brand-text uppercase tracking-wider text-sm">Indelning i likvärdiga arbeten</span>
+            <svg class="w-5 h-5 ml-auto shrink-0 text-brand-text/40 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
+          </summary>
+          <div class="px-5 pb-5 pt-0 text-brand-text/70 text-sm leading-relaxed space-y-3">
+            <p>Resultatet delas in i poängintervall eller kluster. Arbeten inom samma poängintervall betraktas som likvärdiga. Ett lämpligt intervall kan omfatta 5 till 10 poäng.</p>
+            <p><strong>Likvärdiga arbeten 1</strong> — Indelning görs här. Samtliga arbetens viktade poäng och skiljelinjerna visas.</p>
+            <p><strong>Likvärdiga arbeten 2</strong> — Visar endast poängen vid skiljelinjerna. Arbeten ordnas alfabetiskt inom varje grupp.</p>
+            <p><strong>Likvärdiga arbeten 3</strong> — Varken skiljelinjepoäng eller enskilda poäng visas. Det vanligaste sättet att presentera slutresultatet.</p>
+            <p>Hela arbetsvärderingen inklusive dokumentation kan exporteras, skrivas om och redigeras. När resultatet ses som rätt och rimligt är det dags för lönekartläggningen.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lönekartläggning -->
+  <section id="lonekartlaggning" class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-medium text-brand-text uppercase tracking-wider mb-4 text-center">
+        <span class="text-brand-red">Del 2:</span> Lönekartläggning
+      </h2>
+      <p class="text-brand-text/70 text-center max-w-3xl mx-auto mb-10">
+        Verktyget för lönekartläggning har funktioner för de indelningar och beräkningar som krävs
+        enligt diskrimineringslagens krav. Här skapas underlag för att jämföra och analysera löner
+        i lika och likvärdiga arbeten.
+      </p>
+
+      <div class="space-y-0 max-w-3xl mx-auto">
+        <!-- Steg 1 -->
+        <details class="group border-b border-gray-200 bg-brand-gray">
+          <summary class="cursor-pointer p-5 flex items-center gap-4 hover:bg-gray-100 transition-colors">
+            <span class="flex items-center justify-center w-8 h-8 rounded-full bg-brand-red text-white text-sm font-medium shrink-0">1</span>
+            <span class="font-medium text-brand-text uppercase tracking-wider text-sm">Analysera praxis och bestämmelser</span>
+            <svg class="w-5 h-5 ml-auto shrink-0 text-brand-text/40 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
+          </summary>
+          <div class="px-5 pb-5 pt-0 text-brand-text/70 text-sm leading-relaxed space-y-3">
+            <p>Börja med att utvärdera föregående års åtgärdsplan: Har planerade åtgärder genomförts? Finns löneskillnader som inte justerats? Hur har lönerna utvecklats senaste året?</p>
+            <p>Hämta sedan information från lönebestämmelser — kollektivavtal, lönepolicy, kriterier för inplacering, bonussystem och förmåner. Genomgången ska ge underlag för att bedöma om reglerna är könsneutrala och tillämpas lika för kvinnor och män.</p>
+            <p>Analysera vilka kvalifikationer/kriterier som används för bedömning av individuell prestation och kontrollera hur de tillämpas.</p>
+          </div>
+        </details>
+
+        <!-- Steg 2 -->
+        <details class="group border-b border-gray-200 bg-brand-gray">
+          <summary class="cursor-pointer p-5 flex items-center gap-4 hover:bg-gray-100 transition-colors">
+            <span class="flex items-center justify-center w-8 h-8 rounded-full bg-brand-red text-white text-sm font-medium shrink-0">2</span>
+            <span class="font-medium text-brand-text uppercase tracking-wider text-sm">Ta fram löneuppgifter</span>
+            <svg class="w-5 h-5 ml-auto shrink-0 text-brand-text/40 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
+          </summary>
+          <div class="px-5 pb-5 pt-0 text-brand-text/70 text-sm leading-relaxed space-y-3">
+            <p>Skapa en lönefil i Excel med person- och löneuppgifter. Kolumnerna ska ha dessa benämningar i rad 1, i samma ordning:</p>
+            <div class="overflow-x-auto mt-3">
+              <table class="w-full text-sm border border-gray-200">
+                <thead class="bg-gray-100">
+                  <tr>
+                    <th class="text-left p-2 border-b border-gray-200 font-medium">Kolumn</th>
+                    <th class="text-left p-2 border-b border-gray-200 font-medium">Obligatorisk</th>
+                    <th class="text-left p-2 border-b border-gray-200 font-medium">Beskrivning</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td class="p-2 border-b border-gray-100 font-medium">Personnr</td><td class="p-2 border-b border-gray-100">Ja</td><td class="p-2 border-b border-gray-100">10 siffror. Näst sista siffran visar kön (jämn=kvinna, udda=man).</td></tr>
+                  <tr><td class="p-2 border-b border-gray-100 font-medium">Namn</td><td class="p-2 border-b border-gray-100">Nej</td><td class="p-2 border-b border-gray-100">Anställdas namn.</td></tr>
+                  <tr><td class="p-2 border-b border-gray-100 font-medium">Statistikkod</td><td class="p-2 border-b border-gray-100">*</td><td class="p-2 border-b border-gray-100">Anger lika arbeten. Antingen statistikkod eller befattning krävs.</td></tr>
+                  <tr><td class="p-2 border-b border-gray-100 font-medium">Grupp</td><td class="p-2 border-b border-gray-100">*</td><td class="p-2 border-b border-gray-100">Krävs om du inte gjort arbetsvärdering i Analys Lönelots.</td></tr>
+                  <tr><td class="p-2 border-b border-gray-100 font-medium">Befattning</td><td class="p-2 border-b border-gray-100">*</td><td class="p-2 border-b border-gray-100">Befattningsbenämning i klartext. Max 28 tecken inkl. statistikkod.</td></tr>
+                  <tr><td class="p-2 border-b border-gray-100 font-medium">Heltidslön</td><td class="p-2 border-b border-gray-100">Ja</td><td class="p-2 border-b border-gray-100">Månadslön omräknad till heltid.</td></tr>
+                  <tr><td class="p-2 font-medium">Prestationsmått</td><td class="p-2">Nej</td><td class="p-2">Eget mått (heltal). Utan detta används ålder i plotterdiagram.</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </details>
+
+        <!-- Steg 3 -->
+        <details class="group border-b border-gray-200 bg-brand-gray">
+          <summary class="cursor-pointer p-5 flex items-center gap-4 hover:bg-gray-100 transition-colors">
+            <span class="flex items-center justify-center w-8 h-8 rounded-full bg-brand-red text-white text-sm font-medium shrink-0">3</span>
+            <span class="font-medium text-brand-text uppercase tracking-wider text-sm">Skapa lönekartläggning</span>
+            <svg class="w-5 h-5 ml-auto shrink-0 text-brand-text/40 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
+          </summary>
+          <div class="px-5 pb-5 pt-0 text-brand-text/70 text-sm leading-relaxed space-y-3">
+            <p>Funktionen Strukturdiagram visar lönestrukturen i form av löneboxar för alla anställda som ingår i lönekartläggningen.</p>
+            <p>Om du redan gjort en arbetsvärdering i Analys Lönelots, koppla den till lönekartläggningen genom att välja <em>Använd grupper från aktuell arbetsvärdering</em> vid import. Kolumnen Grupp i lönefilen ska då vara tom.</p>
+            <p>Om du har gjort en egen indelning, ange grupp i lönefilen och välj <em>Använd grupper från Excelark</em>.</p>
+          </div>
+        </details>
+
+        <!-- Steg 4 -->
+        <details class="group border-b border-gray-200 bg-brand-gray">
+          <summary class="cursor-pointer p-5 flex items-center gap-4 hover:bg-gray-100 transition-colors">
+            <span class="flex items-center justify-center w-8 h-8 rounded-full bg-brand-red text-white text-sm font-medium shrink-0">4</span>
+            <span class="font-medium text-brand-text uppercase tracking-wider text-sm">Analysera löner i lika arbeten</span>
+            <svg class="w-5 h-5 ml-auto shrink-0 text-brand-text/40 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
+          </summary>
+          <div class="px-5 pb-5 pt-0 text-brand-text/70 text-sm leading-relaxed space-y-3">
+            <p>Använd Lönestrukturtabellen och Plotterdiagrammen. Analysera skillnader i lön, lönespridning och löneutveckling för kvinnor och män som utför lika arbete.</p>
+            <p>Hela löneskillnaden ska förklaras. Skillnader ska kunna motiveras med sakliga skäl som inte har med den anställdes kön att göra.</p>
+            <ul class="list-disc list-inside space-y-1">
+              <li>Bedömningsgrunder ska framgå av lönepolitik och löneavtal.</li>
+              <li>Är ålder/anställningstid ett lönekriterium? Om inte, förklara inte skillnader med medelålder.</li>
+              <li>Hur påverkar "marknaden" lönesättningen? Vilka arbeten är bristyrken?</li>
+            </ul>
+          </div>
+        </details>
+
+        <!-- Steg 5 -->
+        <details class="group border-b border-gray-200 bg-brand-gray">
+          <summary class="cursor-pointer p-5 flex items-center gap-4 hover:bg-gray-100 transition-colors">
+            <span class="flex items-center justify-center w-8 h-8 rounded-full bg-brand-red text-white text-sm font-medium shrink-0">5</span>
+            <span class="font-medium text-brand-text uppercase tracking-wider text-sm">Analysera löner i likvärdiga arbeten</span>
+            <svg class="w-5 h-5 ml-auto shrink-0 text-brand-text/40 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
+          </summary>
+          <div class="px-5 pb-5 pt-0 text-brand-text/70 text-sm leading-relaxed space-y-3">
+            <p>Använd Lönestrukturtabellen för likvärdiga arbeten och diagrammet Lönestruktur. Jämför lönerna i kvinnodominerade arbeten med lönerna i icke-kvinnodominerade arbeten i samma grupp.</p>
+            <p>Ett arbete kan ses som kvinnodominerat om det traditionellt utförts av kvinnor eller om det finns mer än 60 procent kvinnor.</p>
+            <p>Om det finns kvinnodominerade arbeten med lägre lön än ett icke-kvinnodominerat arbete med högre lön och lägre svårighetsgrad, ska analysen innefatta en bedömning av denna löneskillnad.</p>
+          </div>
+        </details>
+
+        <!-- Steg 6 -->
+        <details class="group border-b border-gray-200 bg-brand-gray">
+          <summary class="cursor-pointer p-5 flex items-center gap-4 hover:bg-gray-100 transition-colors">
+            <span class="flex items-center justify-center w-8 h-8 rounded-full bg-brand-red text-white text-sm font-medium shrink-0">6</span>
+            <span class="font-medium text-brand-text uppercase tracking-wider text-sm">Dokumentera</span>
+            <svg class="w-5 h-5 ml-auto shrink-0 text-brand-text/40 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
+          </summary>
+          <div class="px-5 pb-5 pt-0 text-brand-text/70 text-sm leading-relaxed space-y-3">
+            <p>Arbetsgivare med minst tio anställda ska dokumentera arbetet med lönekartläggning. Tabeller och diagram ur Analys Lönelots utgör stommen i dokumentationen.</p>
+            <p>Dokumentationen ska innehålla:</p>
+            <ul class="list-disc list-inside space-y-1">
+              <li>Resultat av lönekartläggningen och analysen</li>
+              <li>Vilka lönejusteringar och åtgärder som behövs</li>
+              <li>Kostnadsberäkning och tidsplanering</li>
+            </ul>
+            <p>Lönejusteringar ska genomföras så snart som möjligt och senast inom tre år.</p>
+          </div>
+        </details>
+
+        <!-- Steg 7 -->
+        <details class="group border-b border-gray-200 bg-brand-gray">
+          <summary class="cursor-pointer p-5 flex items-center gap-4 hover:bg-gray-100 transition-colors">
+            <span class="flex items-center justify-center w-8 h-8 rounded-full bg-brand-red text-white text-sm font-medium shrink-0">7</span>
+            <span class="font-medium text-brand-text uppercase tracking-wider text-sm">Användningsområden</span>
+            <svg class="w-5 h-5 ml-auto shrink-0 text-brand-text/40 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
+          </summary>
+          <div class="px-5 pb-5 pt-0 text-brand-text/70 text-sm leading-relaxed space-y-3">
+            <p><strong>Jämställda löner</strong> — Årliga lönekartläggningar upptäcker, åtgärdar och förhindrar osakliga löneskillnader.</p>
+            <p><strong>Lönekriterier och lönesamtal</strong> — Ett skräddarsytt arbetsvärderingssystem ger bra grund för individuella lönekriterier. Lönesamtalen får bättre kvalitet.</p>
+            <p><strong>Organisationsutveckling</strong> — Analysen synliggör otydligheter i arbetsorganisationen och ansvarsfördelningen.</p>
+            <p><strong>Underlag för löneförhandlingar</strong> — Det klassiska användningsområdet. Årliga lönekartläggningar är en given del i förhandlingarna.</p>
+            <p><strong>Attraktiv arbetsgivare</strong> — En jämställd arbetsgivare är en attraktiv arbetsgivare med bra rekryteringsmöjligheter.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Handbok -->
+  <section class="py-12 bg-brand-gray">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl font-medium text-brand-text uppercase tracking-wider mb-4">Handbok</h2>
+      <p class="text-brand-text/70 mb-6">
+        Handboken visar steg för steg hur man gör en lönekartläggning enligt diskrimineringslagen
+        och hur man anpassar arbetsvärderingssystemet till den egna verksamheten.
+      </p>
+      <a href="/documents/Handbok+till+Analys+Lönelots.pdf" target="_blank" rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 bg-brand-red text-white font-medium px-6 py-3 uppercase tracking-wider text-sm hover:bg-brand-red-dark transition-colors">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+        Hämta handboken (PDF)
+      </a>
+    </div>
+  </section>
+
+  <!-- Vanliga frågor -->
+  <section id="faq" class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-medium text-brand-text uppercase tracking-wider mb-8 text-center">Vanliga frågor</h2>
+
+      <div class="space-y-0 max-w-3xl mx-auto">
+        <details class="group border-b border-gray-200">
+          <summary class="cursor-pointer py-4 font-medium text-brand-text text-sm flex items-center justify-between hover:text-brand-red transition-colors">
+            Vad kostar Analys Lönelots?
+            <svg class="w-5 h-5 shrink-0 text-brand-text/40 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
+          </summary>
+          <div class="pb-4 text-brand-text/70 text-sm">
+            Ingenting! Analys Lönelots är helt kostnadsfritt att ladda ned och använda.
+          </div>
+        </details>
+
+        <details class="group border-b border-gray-200">
+          <summary class="cursor-pointer py-4 font-medium text-brand-text text-sm flex items-center justify-between hover:text-brand-red transition-colors">
+            Var lagras data?
+            <svg class="w-5 h-5 shrink-0 text-brand-text/40 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
+          </summary>
+          <div class="pb-4 text-brand-text/70 text-sm">
+            All information sparas lokalt på din dator i Analys Lönelots-applikationen. Ingen data exporteras eller skickas till externa tjänster. Rapporter som du skapar har endast du tillgång till.
+          </div>
+        </details>
+
+        <details class="group border-b border-gray-200">
+          <summary class="cursor-pointer py-4 font-medium text-brand-text text-sm flex items-center justify-between hover:text-brand-red transition-colors">
+            Varför blir det fel när jag importerar min lönefil?
+            <svg class="w-5 h-5 shrink-0 text-brand-text/40 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
+          </summary>
+          <div class="pb-4 text-brand-text/70 text-sm">
+            Det kan bero på att lönefilen har tomma rader eller fält — alla fält ska vara ifyllda. Ta bort tomma rader och försök igen. Kontrollera också att kolumnnamnen stämmer exakt med formatet ovan.
+          </div>
+        </details>
+
+        <details class="group border-b border-gray-200">
+          <summary class="cursor-pointer py-4 font-medium text-brand-text text-sm flex items-center justify-between hover:text-brand-red transition-colors">
+            Medellön eller medianlön i lönekartläggningen?
+            <svg class="w-5 h-5 shrink-0 text-brand-text/40 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
+          </summary>
+          <div class="pb-4 text-brand-text/70 text-sm">
+            Båda kan användas, men vi rekommenderar medelvärden. Medianen visar bara det mittersta värdet, medan medelvärdet visar "tyngdpunkten" i gruppen. I lönekartläggningen är det viktigt att se på hela spridningen och förklara alla löneskillnader.
+          </div>
+        </details>
+
+        <details class="group border-b border-gray-200">
+          <summary class="cursor-pointer py-4 font-medium text-brand-text text-sm flex items-center justify-between hover:text-brand-red transition-colors">
+            EU:s lönetransparensdirektiv — hur rapporterar jag?
+            <svg class="w-5 h-5 shrink-0 text-brand-text/40 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
+          </summary>
+          <div class="pb-4 text-brand-text/70 text-sm">
+            Analys Lönelots har funktioner som ger den information som behövs för att ta fram datapunkterna som efterfrågas i EU:s lönetransparensdirektiv. Vid frågor, kontakta <a href="mailto:info@lonelotsarna.se" class="text-brand-red hover:text-brand-red-dark">info@lonelotsarna.se</a>.
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Demo & Support -->
+  <section class="py-16 bg-brand-gray">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12 max-w-3xl mx-auto">
+        <div>
+          <h3 class="text-lg font-medium text-brand-text uppercase tracking-wider mb-4">Demo</h3>
+          <p class="text-brand-text/70 text-sm mb-3">
+            En gång i månaden håller vi en öppen digital demo av Analys Lönelots via Zoom (kl 11:00–11:45)
+            där vi visar de viktigaste funktionerna och ger tips.
+          </p>
+          <p class="text-brand-text/70 text-sm">
+            Anmäl dig genom att kontakta oss på
+            <a href="mailto:info@lonelotsarna.se" class="text-brand-red hover:text-brand-red-dark">info@lonelotsarna.se</a>.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-lg font-medium text-brand-text uppercase tracking-wider mb-4">Support</h3>
+          <p class="text-brand-text/70 text-sm mb-3">
+            Teknisk support är kostnadsfri. Arne Nilsson har ansvar för support på verktyget —
+            ett uppdrag han haft sedan programmet lanserades, via JämO, DO och nu Lönelotsarna.
+          </p>
+          <p class="text-sm">
+            <a href="mailto:support@lonelots.se" class="text-brand-red hover:text-brand-red-dark">support@lonelots.se</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Historik -->
+  <section class="py-12 bg-white">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="border-t border-brand-red pt-8">
+        <h3 class="text-lg font-medium text-brand-text uppercase tracking-wider mb-4">Visste du att…</h3>
+        <p class="text-brand-text/70 text-sm leading-relaxed">
+          Analys Lönelots har ursprung i ett av de första könsneutrala arbetsvärderingssystem som togs fram
+          i Sverige på 1990-talet av Anita Harriman och Carin Holm inom ett forskningsprogram på Arbetslivsinstitutet.
+          Verktyget utvecklades vidare hos Jämställdhetsombudsmannen och tillhandahölls av Diskrimineringsombudsmannen
+          fram till år 2018, då Lönelotsarna fick möjlighet att ta över det. Vi har sedan kontinuerligt
+          vidareutvecklat och uppdaterat Analys Lönelots.
+        </p>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  /* Rotate plus icon when details is open */
+  details[open] > summary svg:last-child {
+    transform: rotate(45deg);
+  }
+</style>
