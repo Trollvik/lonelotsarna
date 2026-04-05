@@ -113,6 +113,10 @@ Rapportlistan styrs av filen `src/data/reports.json`. Varje rapport har fyra fä
 
 **Tips:** Om sidan kraschar efter din ändring har du troligen glömt ett komma eller en `"`. Kontakta Emil så fixar han det snabbt.
 
+### Svenska vs engelska
+
+Instruktionerna ovan gäller den **svenska rapportlistan** på startsidan. Den engelska sidan (`src/pages/en/index.astro`) har en separat rapportlänk som inte styrs av `reports.json`. Kontakta Emil om den engelska sidan behöver uppdateras.
+
 ---
 
 ## Ladda upp ett nytt dokument (PDF)
