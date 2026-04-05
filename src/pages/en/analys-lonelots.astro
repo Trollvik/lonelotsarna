@@ -295,31 +295,257 @@ const base = import.meta.env.BASE_URL;
   <section id="faq" class="py-16 bg-white">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-2xl font-medium text-brand-text uppercase tracking-wider mb-8 text-center">FAQ</h2>
-      <div class="space-y-0 max-w-3xl mx-auto">
-        <details class="group border-b border-gray-200">
-          <summary class="cursor-pointer py-4 font-medium text-brand-text text-sm flex items-center justify-between hover:text-brand-red transition-colors">
-            What does Lonelots cost?
-            <svg class="w-5 h-5 shrink-0 text-brand-text/40 transition-transform details-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
-          </summary>
-          <div class="pb-4 text-brand-text/70 text-sm">Nothing! Lonelots is completely free to download and use.</div>
-        </details>
-        <details class="group border-b border-gray-200">
-          <summary class="cursor-pointer py-4 font-medium text-brand-text text-sm flex items-center justify-between hover:text-brand-red transition-colors">
-            Where is data stored?
-            <svg class="w-5 h-5 shrink-0 text-brand-text/40 transition-transform details-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
-          </summary>
-          <div class="pb-4 text-brand-text/70 text-sm">All data is stored locally on your computer. No information is sent to external services. Only you have access to reports you create.</div>
-        </details>
-        <details class="group border-b border-gray-200">
-          <summary class="cursor-pointer py-4 font-medium text-brand-text text-sm flex items-center justify-between hover:text-brand-red transition-colors">
-            How do I get the information required for EU Pay Transparency Directive reporting?
-            <svg class="w-5 h-5 shrink-0 text-brand-text/40 transition-transform details-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
-          </summary>
-          <div class="pb-4 text-brand-text/70 text-sm">
-            <p class="mb-3">In <a href={`${base}/documents/funktioner-analys-lonelots-eus-lonetransparensdirektiv.pdf`} target="_blank" rel="noopener noreferrer" class="text-brand-red hover:text-brand-red-dark underline">this document</a> we describe which features in Lonelots provide the information needed for the data points required by the EU Pay Transparency Directive.</p>
-            <p>For questions, contact <a href="mailto:info@lonelotsarna.se" class="text-brand-red hover:text-brand-red-dark">info@lonelotsarna.se</a>.</p>
-          </div>
-        </details>
+
+      <!-- General questions -->
+      <div class="max-w-3xl mx-auto mb-10">
+        <h3 class="text-lg font-medium text-brand-text uppercase tracking-wider mb-4">General questions about the Lonelots tool</h3>
+        <div class="space-y-0">
+          <details class="group border-b border-gray-200">
+            <summary class="cursor-pointer py-4 font-medium text-brand-text text-sm flex items-center justify-between hover:text-brand-red transition-colors">
+              What does the Lonelots tool cost?
+              <svg class="w-5 h-5 shrink-0 text-brand-text/40 transition-transform details-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
+            </summary>
+            <div class="pb-4 text-brand-text/70 text-sm">
+              Nothing! The Lonelots tool is completely free to download and use.
+            </div>
+          </details>
+
+          <details class="group border-b border-gray-200">
+            <summary class="cursor-pointer py-4 font-medium text-brand-text text-sm flex items-center justify-between hover:text-brand-red transition-colors">
+              Where is the program located on my computer after downloading?
+              <svg class="w-5 h-5 shrink-0 text-brand-text/40 transition-transform details-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
+            </summary>
+            <div class="pb-4 text-brand-text/70 text-sm">
+              In a folder. Nothing is spread across the computer, no DLL files. The database is located under "your user/appdata/weightpoint". This means that if someone else logs into the computer, they will not have access to the database. Sharing is done by backing up and importing.
+            </div>
+          </details>
+
+          <details class="group border-b border-gray-200">
+            <summary class="cursor-pointer py-4 font-medium text-brand-text text-sm flex items-center justify-between hover:text-brand-red transition-colors">
+              Personal data and GDPR: Is anything exported from the computer to the internet?
+              <svg class="w-5 h-5 shrink-0 text-brand-text/40 transition-transform details-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
+            </summary>
+            <div class="pb-4 text-brand-text/70 text-sm">
+              <p class="mb-3">When you use the Lonelots tool, no data is exported from your computer. The file imported into the pay survey is not saved in the database, and reports that are created are only accessible to you.</p>
+              <p class="mb-3">The Lonelots tool consists of two parts: <strong>Job evaluation:</strong> Everything you do here is saved in the local database on your computer. It contains no personal data.</p>
+              <p class="mb-3"><strong>Pay survey:</strong> The Excel file you retrieve from the payroll system contains personal data that must be handled in accordance with GDPR. You should handle this data with care and delete the pay file when you no longer need it.</p>
+              <p class="mb-3">When you import the file into the pay survey, nothing is saved in the database. However, various reports are created that you store yourself. The reports contain no personal identity numbers or names, but there may be jobs with few employees that make an individual identifiable. Therefore, you should store the reports securely so that you can use them for comparisons in future pay surveys. This provides grounds under GDPR for storing the reports securely. The reports should be deleted when you no longer need them. You should have a data processing agreement with any consultants you exchange personal data with. To make the data less sensitive, Lönelotsarna plans to offer the option of using year of birth and gender instead of personal identity numbers in the Excel file from the payroll office.</p>
+            </div>
+          </details>
+
+          <details class="group border-b border-gray-200">
+            <summary class="cursor-pointer py-4 font-medium text-brand-text text-sm flex items-center justify-between hover:text-brand-red transition-colors">
+              Mean or median salary in the pay survey?
+              <svg class="w-5 h-5 shrink-0 text-brand-text/40 transition-transform details-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
+            </summary>
+            <div class="pb-4 text-brand-text/70 text-sm">
+              Both can be used, but we recommend the mean. The median only shows the middle value, while the mean shows the "centre of gravity" of the group. In a pay survey, it is important to look at the full distribution and explain all pay differences.
+            </div>
+          </details>
+
+          <details class="group border-b border-gray-200">
+            <summary class="cursor-pointer py-4 font-medium text-brand-text text-sm flex items-center justify-between hover:text-brand-red transition-colors">
+              How do I get the information required under the Pay Transparency Directive?
+              <svg class="w-5 h-5 shrink-0 text-brand-text/40 transition-transform details-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
+            </summary>
+            <div class="pb-4 text-brand-text/70 text-sm">
+              <p class="mb-3">In <a href={`${base}/documents/funktioner-analys-lonelots-eus-lonetransparensdirektiv.pdf`} target="_blank" rel="noopener noreferrer" class="text-brand-red hover:text-brand-red-dark underline">this document</a> we describe which features in the Lonelots tool provide the information needed for the data points required by the EU Pay Transparency Directive.</p>
+              <p>For questions, contact <a href="mailto:info@lonelotsarna.se" class="text-brand-red hover:text-brand-red-dark">info@lonelotsarna.se</a>.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+
+      <!-- Job evaluation -->
+      <div class="max-w-3xl mx-auto mb-10">
+        <h3 class="text-lg font-medium text-brand-text uppercase tracking-wider mb-4">The Lonelots tool – Job evaluation</h3>
+        <div class="space-y-0">
+          <details class="group border-b border-gray-200">
+            <summary class="cursor-pointer py-4 font-medium text-brand-text text-sm flex items-center justify-between hover:text-brand-red transition-colors">
+              How do we share job evaluations when several people work with the system?
+              <svg class="w-5 h-5 shrink-0 text-brand-text/40 transition-transform details-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
+            </summary>
+            <div class="pb-4 text-brand-text/70 text-sm">
+              The Lonelots tool is a single-user program. This means each computer gets its own installation. To move/copy a job evaluation to another computer: Make a backup and import the job evaluation on the other computer.
+            </div>
+          </details>
+
+          <details class="group border-b border-gray-200">
+            <summary class="cursor-pointer py-4 font-medium text-brand-text text-sm flex items-center justify-between hover:text-brand-red transition-colors">
+              Why should I back up?
+              <svg class="w-5 h-5 shrink-0 text-brand-text/40 transition-transform details-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
+            </summary>
+            <div class="pb-4 text-brand-text/70 text-sm">
+              The Lonelots tool is stored on your device. If automatic backups are not made for this device, it is important that you do so yourself and save the backup file on a different device.
+            </div>
+          </details>
+
+          <details class="group border-b border-gray-200">
+            <summary class="cursor-pointer py-4 font-medium text-brand-text text-sm flex items-center justify-between hover:text-brand-red transition-colors">
+              Import job evaluation – why can't I open the file?
+              <svg class="w-5 h-5 shrink-0 text-brand-text/40 transition-transform details-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
+            </summary>
+            <div class="pb-4 text-brand-text/70 text-sm">
+              Importing a job evaluation means importing a backup from a completed job evaluation, saved with the name xxxbackup.alx. The file cannot be opened with Microsoft Word or any other program. Go to Manage job evaluation and select Import the relevant file.
+            </div>
+          </details>
+
+          <details class="group border-b border-gray-200">
+            <summary class="cursor-pointer py-4 font-medium text-brand-text text-sm flex items-center justify-between hover:text-brand-red transition-colors">
+              Evaluation: Jobs to evaluate / Evaluation sheet
+              <svg class="w-5 h-5 shrink-0 text-brand-text/40 transition-transform details-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
+            </summary>
+            <div class="pb-4 text-brand-text/70 text-sm">
+              To facilitate the evaluation of many jobs, there is an option to group jobs. When you are in the menu Evaluation, Jobs to evaluate, you can enter a value in the Grouping field for a specific job. You can filter by the grouping you have made. The same filter is available in the Job evaluation view. This feature exists solely to facilitate the evaluation process. It is not used anywhere else and does not affect anything else.
+            </div>
+          </details>
+
+          <details class="group border-b border-gray-200">
+            <summary class="cursor-pointer py-4 font-medium text-brand-text text-sm flex items-center justify-between hover:text-brand-red transition-colors">
+              I have problems creating reports in the Job evaluation and running reports in the Pay survey. What could be wrong?
+              <svg class="w-5 h-5 shrink-0 text-brand-text/40 transition-transform details-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
+            </summary>
+            <div class="pb-4 text-brand-text/70 text-sm">
+              Some antivirus programs do not allow files to be created on the computer. We know that McAfee causes problems. We have not found any other solution than to temporarily disable McAfee.
+            </div>
+          </details>
+        </div>
+      </div>
+
+      <!-- Pay survey -->
+      <div class="max-w-3xl mx-auto">
+        <h3 class="text-lg font-medium text-brand-text uppercase tracking-wider mb-4">The Lonelots tool – Pay survey</h3>
+        <div class="space-y-0">
+          <details class="group border-b border-gray-200">
+            <summary class="cursor-pointer py-4 font-medium text-brand-text text-sm flex items-center justify-between hover:text-brand-red transition-colors">
+              Pay survey – should I choose groups from the current job evaluation or the pay file?
+              <svg class="w-5 h-5 shrink-0 text-brand-text/40 transition-transform details-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
+            </summary>
+            <div class="pb-4 text-brand-text/70 text-sm">
+              If you have not done the job evaluation with the Lonelots tool, you must specify groups of equivalent jobs in the pay file yourself. If you have done the job evaluation with the Lonelots tool, select Current job evaluation and the group structure will be imported from the system. Statistics code or job title links the job evaluation and pay survey.
+            </div>
+          </details>
+
+          <details class="group border-b border-gray-200">
+            <summary class="cursor-pointer py-4 font-medium text-brand-text text-sm flex items-center justify-between hover:text-brand-red transition-colors">
+              Pay survey – importing the pay file.
+              <svg class="w-5 h-5 shrink-0 text-brand-text/40 transition-transform details-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
+            </summary>
+            <div class="pb-4 text-brand-text/70 text-sm">
+              Start with the Pay structure table to verify that it works. It is the simplest Excel report.
+            </div>
+          </details>
+
+          <details class="group border-b border-gray-200">
+            <summary class="cursor-pointer py-4 font-medium text-brand-text text-sm flex items-center justify-between hover:text-brand-red transition-colors">
+              Error when importing the pay file. Special characters.
+              <svg class="w-5 h-5 shrink-0 text-brand-text/40 transition-transform details-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
+            </summary>
+            <div class="pb-4 text-brand-text/70 text-sm">
+              Excel has limitations on the names of the tabs it creates. In the Job title field: do not use special characters (?+\ etc.) The total length of statistics code plus job title must not exceed 28 characters.
+            </div>
+          </details>
+
+          <details class="group border-b border-gray-200">
+            <summary class="cursor-pointer py-4 font-medium text-brand-text text-sm flex items-center justify-between hover:text-brand-red transition-colors">
+              Error when importing the pay file. Incorrect field names in the first row.
+              <svg class="w-5 h-5 shrink-0 text-brand-text/40 transition-transform details-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
+            </summary>
+            <div class="pb-4 text-brand-text/70 text-sm">
+              The field names must be in the first row of the pay file and in this order: Personal ID – Name – Statistics code – Job title – Full-time salary. Statistics code is only required if you use it to link the pay file with the job evaluation. Name is only used to make it easier for you to verify that the pay file is correct.
+            </div>
+          </details>
+
+          <details class="group border-b border-gray-200">
+            <summary class="cursor-pointer py-4 font-medium text-brand-text text-sm flex items-center justify-between hover:text-brand-red transition-colors">
+              Error when importing the pay file. Formatting.
+              <svg class="w-5 h-5 shrink-0 text-brand-text/40 transition-transform details-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
+            </summary>
+            <div class="pb-4 text-brand-text/70 text-sm">
+              There should be no formatting in the pay file. There should also be no filters on the first row. Sometimes it is difficult to see if there is formatting. Solve this by selecting all cells, copying, opening a new blank Excel sheet, choosing Paste special and Paste values. This removes all formatting.
+            </div>
+          </details>
+
+          <details class="group border-b border-gray-200">
+            <summary class="cursor-pointer py-4 font-medium text-brand-text text-sm flex items-center justify-between hover:text-brand-red transition-colors">
+              Why do I get incorrect jobs when importing the pay file?
+              <svg class="w-5 h-5 shrink-0 text-brand-text/40 transition-transform details-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
+            </summary>
+            <div class="pb-4 text-brand-text/70 text-sm">
+              The statistics code and job title do not match in the pay file. Exports from payroll systems often contain errors – for example, job titles may be named differently or have typos despite having the same job code. Sometimes there are multiple codes for one job title. If you choose to link the pay survey with the job evaluation, first ensure that the statistics codes are correct, that each code is used for only one job title, and that they match the codes in the job evaluation. If you do not use statistics codes, it becomes especially important that all individual job titles are spelled identically in the pay file during import.
+            </div>
+          </details>
+
+          <details class="group border-b border-gray-200">
+            <summary class="cursor-pointer py-4 font-medium text-brand-text text-sm flex items-center justify-between hover:text-brand-red transition-colors">
+              Scatter plots are not shown for all jobs.
+              <svg class="w-5 h-5 shrink-0 text-brand-text/40 transition-transform details-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
+            </summary>
+            <div class="pb-4 text-brand-text/70 text-sm">
+              The program requires at least three employees in a job to create a tab with a scatter plot.
+            </div>
+          </details>
+
+          <details class="group border-b border-gray-200">
+            <summary class="cursor-pointer py-4 font-medium text-brand-text text-sm flex items-center justify-between hover:text-brand-red transition-colors">
+              Pay survey files.
+              <svg class="w-5 h-5 shrink-0 text-brand-text/40 transition-transform details-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
+            </summary>
+            <div class="pb-4 text-brand-text/70 text-sm">
+              When you run a pay survey, nothing is saved in the database or on the computer. It is therefore important that you save your pay survey files wherever you and/or others want them.
+            </div>
+          </details>
+
+          <details class="group border-b border-gray-200">
+            <summary class="cursor-pointer py-4 font-medium text-brand-text text-sm flex items-center justify-between hover:text-brand-red transition-colors">
+              Are there additional requirements for the imported pay file?
+              <svg class="w-5 h-5 shrink-0 text-brand-text/40 transition-transform details-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
+            </summary>
+            <div class="pb-4 text-brand-text/70 text-sm">
+              The pay file imported into the pay survey must not have any empty rows. The file must also not have any missing values. If it does, the Lonelots tool will display an error message.
+            </div>
+          </details>
+
+          <details class="group border-b border-gray-200">
+            <summary class="cursor-pointer py-4 font-medium text-brand-text text-sm flex items-center justify-between hover:text-brand-red transition-colors">
+              I get an error in the pay survey when importing my pay file. What is wrong?
+              <svg class="w-5 h-5 shrink-0 text-brand-text/40 transition-transform details-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
+            </summary>
+            <div class="pb-4 text-brand-text/70 text-sm">
+              You may have an empty row or an empty field in the pay file. All fields must be filled in. Remove empty rows and remove rows with any empty field.
+            </div>
+          </details>
+
+          <details class="group border-b border-gray-200">
+            <summary class="cursor-pointer py-4 font-medium text-brand-text text-sm flex items-center justify-between hover:text-brand-red transition-colors">
+              Pay survey with the "Custom measure" option.
+              <svg class="w-5 h-5 shrink-0 text-brand-text/40 transition-transform details-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
+            </summary>
+            <div class="pb-4 text-brand-text/70 text-sm">
+              Give the custom measure column a short name, maximum ten characters. Do not use special characters or non-ASCII letters.
+            </div>
+          </details>
+
+          <details class="group border-b border-gray-200">
+            <summary class="cursor-pointer py-4 font-medium text-brand-text text-sm flex items-center justify-between hover:text-brand-red transition-colors">
+              Sorting is incorrect when entering groups manually using numbers instead of letters.
+              <svg class="w-5 h-5 shrink-0 text-brand-text/40 transition-transform details-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
+            </summary>
+            <div class="pb-4 text-brand-text/70 text-sm">
+              The column is sorted as text, so the order becomes alphabetical. Write 01, 02, 03, 11, 12, 13 etc. instead, and the sorting will be correct. Make sure you have formatted the column as text.
+            </div>
+          </details>
+
+          <details class="group border-b border-gray-200">
+            <summary class="cursor-pointer py-4 font-medium text-brand-text text-sm flex items-center justify-between hover:text-brand-red transition-colors">
+              Trailing spaces after job titles, upper and lower case.
+              <svg class="w-5 h-5 shrink-0 text-brand-text/40 transition-transform details-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" /></svg>
+            </summary>
+            <div class="pb-4 text-brand-text/70 text-sm">
+              When you link the pay file to a job evaluation using the job title, the match must be exact. Also make sure there are no trailing spaces after a job title, and use upper and lower case consistently. Do not use two job titles with the same letters but different capitalisation – for example, do not have one job called "Accounting manager" and another "Accounting Manager".
+            </div>
+          </details>
+        </div>
       </div>
     </div>
   </section>
