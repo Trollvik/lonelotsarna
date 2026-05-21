@@ -1,12 +1,13 @@
-# Auto-mergar Dependabot-PRs för minor/patch. Major-bumps blockeras
-# i dependabot.yml så de når aldrig hit.
+# Auto-mergar bot-skapade fix-PRs:
+#   - Dependabot: minor + patch (major blockeras redan i dependabot.yml)
+#   - Snyk: alla snyk-fix-/snyk-upgrade-branches (CVE-fixar)
 #
 # --auto-flaggan kräver att repo har auto-merge aktiverat (GitHub Pro
 # för privata repos). Om det inte är på, faller vi tillbaka till direkt
-# squash-merge — Dependabot kör sin egen validering innan PR skapas, så
+# squash-merge — bot:arna kör sin egen validering innan PR skapas, så
 # fallback är OK för repos utan PR-checks.
 
-name: Dependabot auto-merge
+name: Bot auto-merge
 on: pull_request
 
 permissions:
@@ -14,7 +15,7 @@ permissions:
   pull-requests: write
 
 jobs:
-  automerge:
+  dependabot:
     runs-on: ubuntu-latest
     if: github.actor == 'dependabot[bot]'
     steps:
@@ -26,6 +27,16 @@ jobs:
 
       - name: Merge minor/patch
         if: steps.meta.outputs.update-type == 'version-update:semver-patch' || steps.meta.outputs.update-type == 'version-update:semver-minor'
+        run: gh pr merge --auto --squash "$PR_URL" || gh pr merge --squash "$PR_URL"
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  snyk:
+    runs-on: ubuntu-latest
+    if: startsWith(github.head_ref, 'snyk-')
+    steps:
+      - name: Merge Snyk fix-PR
         run: gh pr merge --auto --squash "$PR_URL" || gh pr merge --squash "$PR_URL"
         env:
           PR_URL: ${{ github.event.pull_request.html_url }}
